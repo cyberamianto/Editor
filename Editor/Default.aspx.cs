@@ -415,6 +415,7 @@ namespace Editor
             }
             Session["mappa"] = mappa;
             ddlScegliAmbiente.Items.Remove(ddlScegliAmbiente.Text);
+            ddlDifficoltà.SelectedIndex = 0;
             if(ddlScegliAmbiente.Items.Count == 0)
             {
                 ddlScegliAmbiente.Items.Add("Ambienti terminati");
@@ -505,11 +506,5 @@ namespace Editor
             bott(btn33, 3, 3);
         }
         #endregion
-
-        protected void ddlScegliAmbiente_TextChanged(object sender, EventArgs e)
-        {
-            txtNomeAmb.Text = "";
-            txtDescrizioneAmb.Text = "";
-        }
     }
 }

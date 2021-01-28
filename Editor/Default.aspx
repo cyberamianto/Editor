@@ -52,7 +52,7 @@
             </asp:Panel>
             <br />
             <asp:Panel ID="pnAmbienteSpecifico" runat="server">
-                <asp:DropDownList ID="ddlScegliAmbiente" runat="server" OnTextChanged="ddlScegliAmbiente_TextChanged">
+                <asp:DropDownList ID="ddlScegliAmbiente" runat="server">
                 </asp:DropDownList>
                 <br />
                 <br />
