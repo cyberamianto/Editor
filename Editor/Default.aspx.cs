@@ -48,6 +48,7 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
+                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 1:
@@ -59,6 +60,7 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
+                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 2:
@@ -70,6 +72,7 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
+                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 3:
@@ -81,6 +84,7 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
+                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                         }
@@ -97,6 +101,7 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
+                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 1:
@@ -108,6 +113,7 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
+                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 2:
@@ -119,6 +125,7 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
+                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 3:
@@ -130,6 +137,7 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
+                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                         }
@@ -146,6 +154,7 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
+                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 1:
@@ -157,6 +166,7 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
+                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 2:
@@ -168,6 +178,7 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
+                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 3:
@@ -179,6 +190,7 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
+                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                         }
@@ -195,6 +207,7 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
+                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 1:
@@ -206,6 +219,7 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
+                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 2:
@@ -217,6 +231,7 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
+                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 3:
@@ -228,6 +243,7 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
+                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                         }
@@ -244,6 +260,50 @@ namespace Editor
                 ddlScegliAmbiente.Items.Add(btnMetodo.Text);
             }
             Session["mappa"] = mappa;
+        }
+
+        public void AttNPC(string i)
+        {
+            if (ddlNumElementi.Text == i && ddlInvAmb.Text == "")
+            {
+                pnInventarioAmbiente.Visible = false;
+                btnNPCAmbiente.Enabled = true;
+            }
+            else if(ddlNumElementi.Text == i)
+            {
+                #region controllo_interfaccia
+                lblNome1.Visible = false;
+                lblDescrizione1.Visible = false;
+                txtNomeEl1Inv.Visible = false;
+                txtDescEl1Inv.Visible = false;
+                ddlRacIndEl1Inv.Visible = false;
+                btnCreaEl1Inv.Visible = false;
+                lblNome2.Visible = false;
+                lblDescrizione2.Visible = false;
+                txtNomeEl2Inv.Visible = false;
+                txtDescEl2Inv.Visible = false;
+                ddlRacIndEl2Inv.Visible = false;
+                btnCreaEl2Inv.Visible = false;
+                lblNome3.Visible = false;
+                lblDescrizione3.Visible = false;
+                txtNomeEl3Inv.Visible = false;
+                txtDescEl3Inv.Visible = false;
+                ddlRacIndEl3Inv.Visible = false;
+                btnCreaEl3Inv.Visible = false;
+                lblNome4.Visible = false;
+                lblDescrizione4.Visible = false;
+                txtNomeEl4Inv.Visible = false;
+                txtDescEl4Inv.Visible = false;
+                ddlRacIndEl4Inv.Visible = false;
+                btnCreaEl4Inv.Visible = false;
+                txtNomeEl5Inv.Visible = false;
+                lblDescrizione5.Visible = false;
+                txtNomeEl5Inv.Visible = false;
+                txtDescEl5Inv.Visible = false;
+                ddlRacIndEl5Inv.Visible = false;
+                btnCreaEl5Inv.Visible = false;
+                #endregion
+            }
         }
 
         protected void btnAmbiente_Click(object sender, EventArgs e)
@@ -267,6 +327,7 @@ namespace Editor
         {
             ddlNumElementi.Enabled = false;
             btnNumero.Enabled = false;
+            ddlInvAmb.Enabled = false;
             switch(ddlNumElementi.Text)
             {
                 case "1":
@@ -380,12 +441,6 @@ namespace Editor
                     #endregion
                     break;
             }
-        }
-
-        protected void btnCreaEl1Inv_Click(object sender, EventArgs e)
-        {
-            Mappa mappa = (Mappa)Session["mappa"];
-            
         }
 
         protected void btnCreaMappa_Click(object sender, EventArgs e)
@@ -506,5 +561,53 @@ namespace Editor
             bott(btn33, 3, 3);
         }
         #endregion
+
+        protected void btnCreaEl1Inv_Click(object sender, EventArgs e)
+        {
+            Mappa mappa = (Mappa)Session["mappa"];
+            foreach (Ambiente x in mappa.ambienti)
+            {
+                if (x != null)
+                {
+                    if (x.Nome == ddlInvAmb.Text)
+                    {
+                        if (txtNomeAmb.Text != "")
+                            x.Nome = txtNomeAmb.Text;
+                        x.Descrizione = txtDescrizioneAmb.Text;
+                        x.Difficoltà = int.Parse(ddlDifficoltà.Text);
+                    }
+                }
+            }
+            AttNPC("1");
+            Session["mappa"] = mappa;
+        }
+
+        protected void btnCreaEl2Inv_Click(object sender, EventArgs e)
+        {
+            Mappa mappa = (Mappa)Session["mappa"];
+            AttNPC("2");
+            Session["mappa"] = mappa;
+        }
+
+        protected void btnCreaEl3Inv_Click(object sender, EventArgs e)
+        {
+            Mappa mappa = (Mappa)Session["mappa"];
+            AttNPC("3");
+            Session["mappa"] = mappa;
+        }
+
+        protected void btnCreaEl4Inv_Click(object sender, EventArgs e)
+        {
+            Mappa mappa = (Mappa)Session["mappa"];
+            AttNPC("4");
+            Session["mappa"] = mappa;
+        }
+
+        protected void btnCreaEl5Inv_Click(object sender, EventArgs e)
+        {
+            Mappa mappa = (Mappa)Session["mappa"];
+            AttNPC("5");
+            Session["mappa"] = mappa;
+        }
     }
 }

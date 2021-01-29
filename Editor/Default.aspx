@@ -80,6 +80,9 @@
             <br />
             <br />
             <asp:Panel ID="pnInventarioAmbiente" runat="server">
+                &nbsp;
+                <asp:DropDownList ID="ddlInvAmb" runat="server">
+                </asp:DropDownList>
                 <asp:DropDownList ID="ddlNumElementi" runat="server">
                     <asp:ListItem>1</asp:ListItem>
                     <asp:ListItem>2</asp:ListItem>
@@ -165,13 +168,13 @@
                 <br />
                 <asp:Button ID="btnCreaEl1Inv" runat="server" OnClick="btnCreaEl1Inv_Click" Text="Crea elemento" Visible="False" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnCreaEl2Inv" runat="server" Text="Crea elemento" Visible="False" />
+                <asp:Button ID="btnCreaEl2Inv" runat="server" Text="Crea elemento" Visible="False" OnClick="btnCreaEl2Inv_Click" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnCreaEl3Inv" runat="server" Text="Crea elemento" Visible="False" />
+                <asp:Button ID="btnCreaEl3Inv" runat="server" Text="Crea elemento" Visible="False" OnClick="btnCreaEl3Inv_Click" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnCreaEl4Inv" runat="server" Text="Crea elemento" Visible="False" />
+                <asp:Button ID="btnCreaEl4Inv" runat="server" Text="Crea elemento" Visible="False" OnClick="btnCreaEl4Inv_Click" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnCreaEl5Inv" runat="server" Text="Crea elemento" Visible="False" />
+                <asp:Button ID="btnCreaEl5Inv" runat="server" Text="Crea elemento" Visible="False" OnClick="btnCreaEl5Inv_Click" />
                 <br />
                 <br />
                 <br />
