@@ -258,6 +258,7 @@ namespace Editor
                 btnMetodo.Enabled = false;
                 mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                 ddlScegliAmbiente.Items.Add(btnMetodo.Text);
+                ddlInvAmb.Items.Add(btnMetodo.Text);
             }
             Session["mappa"] = mappa;
         }
@@ -302,6 +303,10 @@ namespace Editor
                 txtDescEl5Inv.Visible = false;
                 ddlRacIndEl5Inv.Visible = false;
                 btnCreaEl5Inv.Visible = false;
+                ddlNumElementi.Enabled = true;
+                btnNumero.Enabled = true;
+                ddlInvAmb.Enabled = true;
+                ddlInvAmb.Items.Remove(ddlInvAmb.Text);
                 #endregion
             }
         }
@@ -571,13 +576,22 @@ namespace Editor
                 {
                     if (x.Nome == ddlInvAmb.Text)
                     {
-                        if (txtNomeAmb.Text != "")
-                            x.Nome = txtNomeAmb.Text;
-                        x.Descrizione = txtDescrizioneAmb.Text;
-                        x.Difficoltà = int.Parse(ddlDifficoltà.Text);
+                        switch(ddlInvAmb.Text)
+                        {
+                            case "Strutturale":
+                                x.InvAmbiente.Add(new Entity(txtNomeEl1Inv.Text, txtDescEl1Inv.Text, false, false));
+                                break;
+                            case "Raccoglibile":
+                                x.InvAmbiente.Add(new Entity(txtNomeEl1Inv.Text, txtDescEl1Inv.Text, true, false));
+                                break;
+                            case "Raccoglibile-Indossabile":
+                                x.InvAmbiente.Add(new Entity(txtNomeEl1Inv.Text, txtDescEl1Inv.Text, true, true));
+                                break;
+                        }
                     }
                 }
             }
+            btnCreaEl1Inv.Enabled = false;
             AttNPC("1");
             Session["mappa"] = mappa;
         }
