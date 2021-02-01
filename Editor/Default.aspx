@@ -181,6 +181,11 @@
                 <br />
             </asp:Panel>
             <br />
+            <asp:Panel ID="pnNPC" runat="server">
+                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <br />
+                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+            </asp:Panel>
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
