@@ -48,7 +48,6 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
-                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 1:
@@ -60,7 +59,6 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
-                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 2:
@@ -72,7 +70,6 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
-                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 3:
@@ -84,7 +81,6 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
-                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                         }
@@ -101,7 +97,6 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
-                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 1:
@@ -113,7 +108,6 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
-                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 2:
@@ -125,7 +119,6 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
-                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 3:
@@ -137,7 +130,6 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
-                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                         }
@@ -154,7 +146,6 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
-                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 1:
@@ -166,7 +157,6 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
-                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 2:
@@ -178,7 +168,6 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
-                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 3:
@@ -190,7 +179,6 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
-                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                         }
@@ -207,7 +195,6 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
-                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 1:
@@ -219,7 +206,6 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
-                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 2:
@@ -231,7 +217,6 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
-                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                             case 3:
@@ -243,7 +228,6 @@ namespace Editor
                                     btnMetodo.Enabled = false;
                                     mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
-                                    ddlInvAmb.Items.Add(btnMetodo.Text);
                                 }
                                 break;
                         }
@@ -258,7 +242,6 @@ namespace Editor
                 btnMetodo.Enabled = false;
                 mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
                 ddlScegliAmbiente.Items.Add(btnMetodo.Text);
-                ddlInvAmb.Items.Add(btnMetodo.Text);
             }
             Session["mappa"] = mappa;
         }
@@ -311,6 +294,35 @@ namespace Editor
             }
         }
 
+        public void BottElInv(TextBox txtNomeMetodo, TextBox txtDescMetodo, Button btnMetodo, string npc)
+        {
+            Mappa mappa = (Mappa)Session["mappa"];
+            foreach (Ambiente x in mappa.ambienti)
+            {
+                if (x != null)
+                {
+                    if (x.Nome == ddlInvAmb.Text)
+                    {
+                        switch (ddlInvAmb.Text)
+                        {
+                            case "Strutturale":
+                                x.InvAmbiente.Add(new Entity(txtNomeMetodo.Text, txtDescMetodo.Text, false, false));
+                                break;
+                            case "Raccoglibile":
+                                x.InvAmbiente.Add(new Entity(txtNomeMetodo.Text, txtDescMetodo.Text, true, false));
+                                break;
+                            case "Raccoglibile-Indossabile":
+                                x.InvAmbiente.Add(new Entity(txtNomeMetodo.Text, txtDescMetodo.Text, true, true));
+                                break;
+                        }
+                    }
+                }
+            }
+            btnMetodo.Enabled = false;
+            AttNPC(npc);
+            Session["mappa"] = mappa;
+        }
+
         protected void btnAmbiente_Click(object sender, EventArgs e)
         {
             #region getione_interfaccia
@@ -330,6 +342,7 @@ namespace Editor
 
         protected void btnNumero_Click(object sender, EventArgs e)
         {
+            #region gestione_interfaccia
             ddlNumElementi.Enabled = false;
             btnNumero.Enabled = false;
             ddlInvAmb.Enabled = false;
@@ -343,6 +356,7 @@ namespace Editor
                     txtDescEl1Inv.Visible = true;
                     ddlRacIndEl1Inv.Visible = true;
                     btnCreaEl1Inv.Visible = true;
+                    btnCreaEl1Inv.Enabled = true;
                     #endregion
                     break;
                 case "2":
@@ -353,12 +367,14 @@ namespace Editor
                     txtDescEl1Inv.Visible = true;
                     ddlRacIndEl1Inv.Visible = true;
                     btnCreaEl1Inv.Visible = true;
+                    btnCreaEl1Inv.Enabled = true;
                     lblNome2.Visible = true;
                     lblDescrizione2.Visible = true;
                     txtNomeEl2Inv.Visible = true;
                     txtDescEl2Inv.Visible = true;
                     ddlRacIndEl2Inv.Visible = true;
                     btnCreaEl2Inv.Visible = true;
+                    btnCreaEl2Inv.Enabled = true;
                     #endregion
                     break;
                 case "3":
@@ -369,18 +385,21 @@ namespace Editor
                     txtDescEl1Inv.Visible = true;
                     ddlRacIndEl1Inv.Visible = true;
                     btnCreaEl1Inv.Visible = true;
+                    btnCreaEl1Inv.Enabled = true;
                     lblNome2.Visible = true;
                     lblDescrizione2.Visible = true;
                     txtNomeEl2Inv.Visible = true;
                     txtDescEl2Inv.Visible = true;
                     ddlRacIndEl2Inv.Visible = true;
                     btnCreaEl2Inv.Visible = true;
+                    btnCreaEl2Inv.Enabled = true;
                     lblNome3.Visible = true;
                     lblDescrizione3.Visible = true;
                     txtNomeEl3Inv.Visible = true;
                     txtDescEl3Inv.Visible = true;
                     ddlRacIndEl3Inv.Visible = true;
                     btnCreaEl3Inv.Visible = true;
+                    btnCreaEl3Inv.Enabled = true;
                     #endregion
                     break;
                 case "4":
@@ -391,24 +410,28 @@ namespace Editor
                     txtDescEl1Inv.Visible = true;
                     ddlRacIndEl1Inv.Visible = true;
                     btnCreaEl1Inv.Visible = true;
+                    btnCreaEl1Inv.Enabled = true;
                     lblNome2.Visible = true;
                     lblDescrizione2.Visible = true;
                     txtNomeEl2Inv.Visible = true;
                     txtDescEl2Inv.Visible = true;
                     ddlRacIndEl2Inv.Visible = true;
                     btnCreaEl2Inv.Visible = true;
+                    btnCreaEl2Inv.Enabled = true;
                     lblNome3.Visible = true;
                     lblDescrizione3.Visible = true;
                     txtNomeEl3Inv.Visible = true;
                     txtDescEl3Inv.Visible = true;
                     ddlRacIndEl3Inv.Visible = true;
                     btnCreaEl3Inv.Visible = true;
+                    btnCreaEl3Inv.Enabled = true;
                     lblNome4.Visible = true;
                     lblDescrizione4.Visible = true;
                     txtNomeEl4Inv.Visible = true;
                     txtDescEl4Inv.Visible = true;
                     ddlRacIndEl4Inv.Visible = true;
                     btnCreaEl4Inv.Visible = true;
+                    btnCreaEl4Inv.Enabled = true;
                     #endregion
                     break;
                 case "5":
@@ -419,33 +442,39 @@ namespace Editor
                     txtDescEl1Inv.Visible = true;
                     ddlRacIndEl1Inv.Visible = true;
                     btnCreaEl1Inv.Visible = true;
+                    btnCreaEl1Inv.Enabled = true;
                     lblNome2.Visible = true;
                     lblDescrizione2.Visible = true;
                     txtNomeEl2Inv.Visible = true;
                     txtDescEl2Inv.Visible = true;
                     ddlRacIndEl2Inv.Visible = true;
                     btnCreaEl2Inv.Visible = true;
+                    btnCreaEl2Inv.Enabled = true;
                     lblNome3.Visible = true;
                     lblDescrizione3.Visible = true;
                     txtNomeEl3Inv.Visible = true;
                     txtDescEl3Inv.Visible = true;
                     ddlRacIndEl3Inv.Visible = true;
                     btnCreaEl3Inv.Visible = true;
+                    btnCreaEl3Inv.Enabled = true;
                     lblNome4.Visible = true;
                     lblDescrizione4.Visible = true;
                     txtNomeEl4Inv.Visible = true;
                     txtDescEl4Inv.Visible = true;
                     ddlRacIndEl4Inv.Visible = true;
                     btnCreaEl4Inv.Visible = true;
+                    btnCreaEl4Inv.Enabled = true;
                     txtNomeEl5Inv.Visible = true;
                     lblDescrizione5.Visible = true;
                     txtNomeEl5Inv.Visible = true;
                     txtDescEl5Inv.Visible = true;
                     ddlRacIndEl5Inv.Visible = true;
                     btnCreaEl5Inv.Visible = true;
+                    btnCreaEl5Inv.Enabled = true;
                     #endregion
                     break;
             }
+            #endregion
         }
 
         protected void btnCreaMappa_Click(object sender, EventArgs e)
@@ -478,6 +507,13 @@ namespace Editor
             ddlDifficoltà.SelectedIndex = 0;
             if(ddlScegliAmbiente.Items.Count == 0)
             {
+                foreach(Ambiente x in mappa.ambienti)
+                {
+                    if(x != null)
+                    {
+                        ddlInvAmb.Items.Add(x.Nome);
+                    }
+                }
                 ddlScegliAmbiente.Items.Add("Ambienti terminati");
                 btnAggiuntaSpecifiche.Enabled = false;
                 pnAmbienteSpecifico.Visible = false;
@@ -569,59 +605,27 @@ namespace Editor
 
         protected void btnCreaEl1Inv_Click(object sender, EventArgs e)
         {
-            Mappa mappa = (Mappa)Session["mappa"];
-            foreach (Ambiente x in mappa.ambienti)
-            {
-                if (x != null)
-                {
-                    if (x.Nome == ddlInvAmb.Text)
-                    {
-                        switch(ddlInvAmb.Text)
-                        {
-                            case "Strutturale":
-                                x.InvAmbiente.Add(new Entity(txtNomeEl1Inv.Text, txtDescEl1Inv.Text, false, false));
-                                break;
-                            case "Raccoglibile":
-                                x.InvAmbiente.Add(new Entity(txtNomeEl1Inv.Text, txtDescEl1Inv.Text, true, false));
-                                break;
-                            case "Raccoglibile-Indossabile":
-                                x.InvAmbiente.Add(new Entity(txtNomeEl1Inv.Text, txtDescEl1Inv.Text, true, true));
-                                break;
-                        }
-                    }
-                }
-            }
-            btnCreaEl1Inv.Enabled = false;
-            AttNPC("1");
-            Session["mappa"] = mappa;
+            BottElInv(txtNomeEl1Inv, txtDescEl1Inv, btnCreaEl1Inv, "1");
         }
 
         protected void btnCreaEl2Inv_Click(object sender, EventArgs e)
         {
-            Mappa mappa = (Mappa)Session["mappa"];
-            AttNPC("2");
-            Session["mappa"] = mappa;
+            BottElInv(txtNomeEl2Inv, txtDescEl2Inv, btnCreaEl2Inv, "2");
         }
 
         protected void btnCreaEl3Inv_Click(object sender, EventArgs e)
         {
-            Mappa mappa = (Mappa)Session["mappa"];
-            AttNPC("3");
-            Session["mappa"] = mappa;
+            BottElInv(txtNomeEl3Inv, txtDescEl3Inv, btnCreaEl3Inv, "3");
         }
 
         protected void btnCreaEl4Inv_Click(object sender, EventArgs e)
         {
-            Mappa mappa = (Mappa)Session["mappa"];
-            AttNPC("4");
-            Session["mappa"] = mappa;
+            BottElInv(txtNomeEl4Inv, txtDescEl4Inv, btnCreaEl4Inv, "4");
         }
 
         protected void btnCreaEl5Inv_Click(object sender, EventArgs e)
         {
-            Mappa mappa = (Mappa)Session["mappa"];
-            AttNPC("5");
-            Session["mappa"] = mappa;
+            BottElInv(txtNomeEl5Inv, txtDescEl5Inv, btnCreaEl5Inv, "5");
         }
     }
 }
