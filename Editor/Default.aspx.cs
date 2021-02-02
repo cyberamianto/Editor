@@ -19,6 +19,7 @@ namespace Editor
                 pnAmbienteGenerale.Visible = false;
                 pnAmbienteSpecifico.Visible = false;
                 pnInventarioAmbiente.Visible = false;
+                pnNPC.Visible = false;
                 btnAmbiente.Enabled = true;
                 btnInventarioAmbiente.Enabled = false;
                 btnNPCAmbiente.Enabled = false;
@@ -46,7 +47,7 @@ namespace Editor
                                     btnMetodo.Text = $"Amb{(int)Session["nAmb"]}";
                                     btnMetodo.BackColor = System.Drawing.Color.Red;
                                     btnMetodo.Enabled = false;
-                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
+                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1, "");
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
                                 }
                                 break;
@@ -57,7 +58,7 @@ namespace Editor
                                     btnMetodo.Text = $"Amb{(int)Session["nAmb"]}";
                                     btnMetodo.BackColor = System.Drawing.Color.Red;
                                     btnMetodo.Enabled = false;
-                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
+                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1, "");
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
                                 }
                                 break;
@@ -68,7 +69,7 @@ namespace Editor
                                     btnMetodo.Text = $"Amb{(int)Session["nAmb"]}";
                                     btnMetodo.BackColor = System.Drawing.Color.Red;
                                     btnMetodo.Enabled = false;
-                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
+                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1, "");
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
                                 }
                                 break;
@@ -79,7 +80,7 @@ namespace Editor
                                     btnMetodo.Text = $"Amb{(int)Session["nAmb"]}";
                                     btnMetodo.BackColor = System.Drawing.Color.Red;
                                     btnMetodo.Enabled = false;
-                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
+                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1, "");
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
                                 }
                                 break;
@@ -95,7 +96,7 @@ namespace Editor
                                     btnMetodo.Text = $"Amb{(int)Session["nAmb"]}";
                                     btnMetodo.BackColor = System.Drawing.Color.Red;
                                     btnMetodo.Enabled = false;
-                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
+                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1, "");
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
                                 }
                                 break;
@@ -106,7 +107,7 @@ namespace Editor
                                     btnMetodo.Text = $"Amb{(int)Session["nAmb"]}";
                                     btnMetodo.BackColor = System.Drawing.Color.Red;
                                     btnMetodo.Enabled = false;
-                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
+                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1, "");
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
                                 }
                                 break;
@@ -117,7 +118,7 @@ namespace Editor
                                     btnMetodo.Text = $"Amb{(int)Session["nAmb"]}";
                                     btnMetodo.BackColor = System.Drawing.Color.Red;
                                     btnMetodo.Enabled = false;
-                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
+                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1, "");
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
                                 }
                                 break;
@@ -128,7 +129,7 @@ namespace Editor
                                     btnMetodo.Text = $"Amb{(int)Session["nAmb"]}";
                                     btnMetodo.BackColor = System.Drawing.Color.Red;
                                     btnMetodo.Enabled = false;
-                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
+                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1, "");
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
                                 }
                                 break;
@@ -144,7 +145,7 @@ namespace Editor
                                     btnMetodo.Text = $"Amb{(int)Session["nAmb"]}";
                                     btnMetodo.BackColor = System.Drawing.Color.Red;
                                     btnMetodo.Enabled = false;
-                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
+                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1, "");
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
                                 }
                                 break;
@@ -155,7 +156,7 @@ namespace Editor
                                     btnMetodo.Text = $"Amb{(int)Session["nAmb"]}";
                                     btnMetodo.BackColor = System.Drawing.Color.Red;
                                     btnMetodo.Enabled = false;
-                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
+                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1, "");
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
                                 }
                                 break;
@@ -166,7 +167,7 @@ namespace Editor
                                     btnMetodo.Text = $"Amb{(int)Session["nAmb"]}";
                                     btnMetodo.BackColor = System.Drawing.Color.Red;
                                     btnMetodo.Enabled = false;
-                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
+                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1, "");
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
                                 }
                                 break;
@@ -177,7 +178,7 @@ namespace Editor
                                     btnMetodo.Text = $"Amb{(int)Session["nAmb"]}";
                                     btnMetodo.BackColor = System.Drawing.Color.Red;
                                     btnMetodo.Enabled = false;
-                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
+                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1, "");
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
                                 }
                                 break;
@@ -193,7 +194,7 @@ namespace Editor
                                     btnMetodo.Text = $"Amb{(int)Session["nAmb"]}";
                                     btnMetodo.BackColor = System.Drawing.Color.Red;
                                     btnMetodo.Enabled = false;
-                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
+                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1, "");
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
                                 }
                                 break;
@@ -204,7 +205,7 @@ namespace Editor
                                     btnMetodo.Text = $"Amb{(int)Session["nAmb"]}";
                                     btnMetodo.BackColor = System.Drawing.Color.Red;
                                     btnMetodo.Enabled = false;
-                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
+                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1, "");
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
                                 }
                                 break;
@@ -215,7 +216,7 @@ namespace Editor
                                     btnMetodo.Text = $"Amb{(int)Session["nAmb"]}";
                                     btnMetodo.BackColor = System.Drawing.Color.Red;
                                     btnMetodo.Enabled = false;
-                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
+                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1, "");
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
                                 }
                                 break;
@@ -226,7 +227,7 @@ namespace Editor
                                     btnMetodo.Text = $"Amb{(int)Session["nAmb"]}";
                                     btnMetodo.BackColor = System.Drawing.Color.Red;
                                     btnMetodo.Enabled = false;
-                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
+                                    mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1, "");
                                     ddlScegliAmbiente.Items.Add(btnMetodo.Text);
                                 }
                                 break;
@@ -240,7 +241,7 @@ namespace Editor
                 btnMetodo.Text = $"Amb{(int)Session["nAmb"]}";
                 btnMetodo.BackColor = System.Drawing.Color.Red;
                 btnMetodo.Enabled = false;
-                mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1);
+                mappa.ambienti[r, c] = new Ambiente(btnMetodo.Text, "", 1, "");
                 ddlScegliAmbiente.Items.Add(btnMetodo.Text);
             }
             Session["mappa"] = mappa;
@@ -248,12 +249,7 @@ namespace Editor
 
         public void AttNPC(string i)
         {
-            if (ddlNumElementi.Text == i && ddlInvAmb.Text == "")
-            {
-                pnInventarioAmbiente.Visible = false;
-                btnNPCAmbiente.Enabled = true;
-            }
-            else if(ddlNumElementi.Text == i)
+            if (ddlNumElementi.Text == i)
             {
                 #region controllo_interfaccia
                 lblNome1.Visible = false;
@@ -291,6 +287,11 @@ namespace Editor
                 ddlInvAmb.Enabled = true;
                 ddlInvAmb.Items.Remove(ddlInvAmb.Text);
                 #endregion
+            }
+            if (ddlNumElementi.Text == i && ddlInvAmb.Text == "")
+            {
+                pnInventarioAmbiente.Visible = false;
+                btnNPCAmbiente.Enabled = true;
             }
         }
 
@@ -512,6 +513,7 @@ namespace Editor
                     if(x != null)
                     {
                         ddlInvAmb.Items.Add(x.Nome);
+                        ddlAmbNPC.Items.Add(x.Nome);
                     }
                 }
                 ddlScegliAmbiente.Items.Add("Ambienti terminati");
@@ -626,6 +628,27 @@ namespace Editor
         protected void btnCreaEl5Inv_Click(object sender, EventArgs e)
         {
             BottElInv(txtNomeEl5Inv, txtDescEl5Inv, btnCreaEl5Inv, "5");
+        }
+
+        protected void btnNPCAmbiente_Click(object sender, EventArgs e)
+        {
+            pnNPC.Visible = true;
+        }
+
+        protected void btnCreaNPC_Click(object sender, EventArgs e)
+        {
+            Mappa mappa = (Mappa)Session["mappa"];
+            foreach (Ambiente x in mappa.ambienti)
+            {
+                if (x != null)
+                {
+                    if (x.Nome == ddlAmbNPC.Text)
+                    {
+                        x.npcAmb.Add(new NPC(txtNomeNPC.Text, ddlSaluteNPC.Text, int.Parse(ddlLivelloEsp.Text), txtDescNPC.Text, ddlAmbNPC.Text));
+                    }
+                }
+            }
+            Session["mappa"] = mappa;
         }
     }
 }

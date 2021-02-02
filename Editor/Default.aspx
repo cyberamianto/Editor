@@ -14,7 +14,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnInventarioAmbiente" runat="server" Text="Inventario Ambiente" OnClick="btnInventarioAmbiente_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnNPCAmbiente" runat="server" Text="NPC ambiente" />
+            <asp:Button ID="btnNPCAmbiente" runat="server" Text="NPC ambiente" OnClick="btnNPCAmbiente_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnInventarioNPC" runat="server" Text="Inventario NPC" />
             <br />
@@ -182,9 +182,35 @@
             </asp:Panel>
             <br />
             <asp:Panel ID="pnNPC" runat="server">
-                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtNomeNPC" runat="server"></asp:TextBox>
                 <br />
-                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtDescNPC" runat="server" Height="129px" TextMode="MultiLine" Width="209px"></asp:TextBox>
+                <br />
+                <asp:DropDownList ID="ddlAmbNPC" runat="server">
+                </asp:DropDownList>
+                <br />
+                <asp:DropDownList ID="ddlSaluteNPC" runat="server">
+                    <asp:ListItem>Molto buona</asp:ListItem>
+                    <asp:ListItem>Buona</asp:ListItem>
+                    <asp:ListItem>Stabile</asp:ListItem>
+                    <asp:ListItem>Non buona</asp:ListItem>
+                    <asp:ListItem>Critica</asp:ListItem>
+                </asp:DropDownList>
+                <br />
+                <asp:DropDownList ID="ddlLivelloEsp" runat="server">
+                    <asp:ListItem>1</asp:ListItem>
+                    <asp:ListItem>2</asp:ListItem>
+                    <asp:ListItem>3</asp:ListItem>
+                    <asp:ListItem>4</asp:ListItem>
+                    <asp:ListItem>5</asp:ListItem>
+                    <asp:ListItem>6</asp:ListItem>
+                    <asp:ListItem>7</asp:ListItem>
+                    <asp:ListItem>8</asp:ListItem>
+                    <asp:ListItem>9</asp:ListItem>
+                    <asp:ListItem>10</asp:ListItem>
+                </asp:DropDownList>
+                <br />
+                <asp:Button ID="btnCreaNPC" runat="server" OnClick="btnCreaNPC_Click" Text="Crea NPC" />
             </asp:Panel>
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
