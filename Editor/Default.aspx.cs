@@ -19,6 +19,7 @@ namespace Editor
                 pnAmbienteGenerale.Visible = false;
                 pnAmbienteSpecifico.Visible = false;
                 pnInventarioAmbiente.Visible = false;
+                pnInventarioNPC.Visible = false;
                 pnNPC.Visible = false;
                 btnAmbiente.Enabled = true;
                 btnInventarioAmbiente.Enabled = false;
@@ -277,6 +278,7 @@ namespace Editor
                 ddlRacIndEl4Inv.Visible = false;
                 btnCreaEl4Inv.Visible = false;
                 txtNomeEl5Inv.Visible = false;
+                lblNome5.Visible = true;
                 lblDescrizione5.Visible = false;
                 txtNomeEl5Inv.Visible = false;
                 txtDescEl5Inv.Visible = false;
@@ -292,6 +294,52 @@ namespace Editor
             {
                 pnInventarioAmbiente.Visible = false;
                 btnNPCAmbiente.Enabled = true;
+            }
+        }
+
+        public void AttNPC1(string i)
+        {
+            if (ddlNumElementiInvNPC.Text == i)
+            {
+                #region controllo_interfaccia
+                lblNome6.Visible = false;
+                lblDescrizione6.Visible = false;
+                txtNomeEl1InvNPC.Visible = false;
+                txtDescEl1InvNPC.Visible = false;
+                ddlRacIndEl1InvNPC.Visible = false;
+                btnCreaEl1InvNPC.Visible = false;
+                btnCreaEl1InvNPC.Enabled = false;
+                lblNome7.Visible = false;
+                lblDescrizione7.Visible = false;
+                txtNomeEl2InvNPC.Visible = false;
+                txtDescEl2InvNPC.Visible = false;
+                ddlRacIndEl2InvNPC.Visible = false;
+                btnCreaEl2InvNPC.Visible = false;
+                btnCreaEl2InvNPC.Enabled = false;
+                lblNome8.Visible = false;
+                lblDescrizione8.Visible = false;
+                txtNomeEl3InvNPC.Visible = false;
+                txtDescEl3InvNPC.Visible = false;
+                ddlRacIndEl3InvNPC.Visible = false;
+                btnCreaEl3InvNPC.Visible = false;
+                btnCreaEl3InvNPC.Enabled = false;
+                lblNome9.Visible = false;
+                lblDescrizione9.Visible = false;
+                txtNomeEl4InvNPC.Visible = false;
+                txtDescEl4InvNPC.Visible = false;
+                ddlRacIndEl4InvNPC.Visible = false;
+                btnCreaEl4InvNPC.Visible = false;
+                btnCreaEl4InvNPC.Enabled = false;
+                txtNomeEl5InvNPC.Visible = false;
+                lblNome10.Visible = false;
+                lblDescrizione10.Visible = false;
+                txtNomeEl5InvNPC.Visible = false;
+                txtDescEl5InvNPC.Visible = false;
+                ddlRacIndEl5InvNPC.Visible = false;
+                btnCreaEl5InvNPC.Visible = false;
+                btnCreaEl5InvNPC.Enabled = false;
+                btnCreaNPC.Enabled = true;
+                #endregion
             }
         }
 
@@ -649,6 +697,171 @@ namespace Editor
                 }
             }
             Session["mappa"] = mappa;
+            pnNPC.Enabled = false;
+            pnInventarioNPC.Visible = true;
+        }
+
+        protected void btnNumeroInvNPC_Click(object sender, EventArgs e)
+        {
+            #region gestione_interfaccia
+            ddlNumElementi.Enabled = false;
+            btnNumero.Enabled = false;
+            ddlInvAmb.Enabled = false;
+            switch (ddlNumElementi.Text)
+            {
+                case "1":
+                    #region gestione_interfaccia
+                    lblNome6.Visible = true;
+                    lblDescrizione6.Visible = true;
+                    txtNomeEl1InvNPC.Visible = true;
+                    txtDescEl1InvNPC.Visible = true;
+                    ddlRacIndEl1InvNPC.Visible = true;
+                    btnCreaEl1InvNPC.Visible = true;
+                    btnCreaEl1InvNPC.Enabled = true;
+                    #endregion
+                    break;
+                case "2":
+                    #region controllo_interfaccia
+                    lblNome6.Visible = true;
+                    lblDescrizione6.Visible = true;
+                    txtNomeEl1InvNPC.Visible = true;
+                    txtDescEl1InvNPC.Visible = true;
+                    ddlRacIndEl1InvNPC.Visible = true;
+                    btnCreaEl1InvNPC.Visible = true;
+                    btnCreaEl1InvNPC.Enabled = true;
+                    lblNome7.Visible = true;
+                    lblDescrizione7.Visible = true;
+                    txtNomeEl2InvNPC.Visible = true;
+                    txtDescEl2InvNPC.Visible = true;
+                    ddlRacIndEl2InvNPC.Visible = true;
+                    btnCreaEl2InvNPC.Visible = true;
+                    btnCreaEl2InvNPC.Enabled = true;
+                    #endregion
+                    break;
+                case "3":
+                    #region controllo_interfaccia
+                    lblNome6.Visible = true;
+                    lblDescrizione6.Visible = true;
+                    txtNomeEl1InvNPC.Visible = true;
+                    txtDescEl1InvNPC.Visible = true;
+                    ddlRacIndEl1InvNPC.Visible = true;
+                    btnCreaEl1InvNPC.Visible = true;
+                    btnCreaEl1InvNPC.Enabled = true;
+                    lblNome7.Visible = true;
+                    lblDescrizione7.Visible = true;
+                    txtNomeEl2InvNPC.Visible = true;
+                    txtDescEl2InvNPC.Visible = true;
+                    ddlRacIndEl2InvNPC.Visible = true;
+                    btnCreaEl2InvNPC.Visible = true;
+                    btnCreaEl2InvNPC.Enabled = true;
+                    lblNome8.Visible = true;
+                    lblDescrizione8.Visible = true;
+                    txtNomeEl3InvNPC.Visible = true;
+                    txtDescEl3InvNPC.Visible = true;
+                    ddlRacIndEl3InvNPC.Visible = true;
+                    btnCreaEl3InvNPC.Visible = true;
+                    btnCreaEl3InvNPC.Enabled = true;
+                    #endregion
+                    break;
+                case "4":
+                    #region controllo_interfaccia
+                    lblNome6.Visible = true;
+                    lblDescrizione6.Visible = true;
+                    txtNomeEl1InvNPC.Visible = true;
+                    txtDescEl1InvNPC.Visible = true;
+                    ddlRacIndEl1InvNPC.Visible = true;
+                    btnCreaEl1InvNPC.Visible = true;
+                    btnCreaEl1InvNPC.Enabled = true;
+                    lblNome7.Visible = true;
+                    lblDescrizione7.Visible = true;
+                    txtNomeEl2InvNPC.Visible = true;
+                    txtDescEl2InvNPC.Visible = true;
+                    ddlRacIndEl2InvNPC.Visible = true;
+                    btnCreaEl2InvNPC.Visible = true;
+                    btnCreaEl2InvNPC.Enabled = true;
+                    lblNome8.Visible = true;
+                    lblDescrizione8.Visible = true;
+                    txtNomeEl3InvNPC.Visible = true;
+                    txtDescEl3InvNPC.Visible = true;
+                    ddlRacIndEl3InvNPC.Visible = true;
+                    btnCreaEl3InvNPC.Visible = true;
+                    btnCreaEl3InvNPC.Enabled = true;
+                    lblNome9.Visible = true;
+                    lblDescrizione9.Visible = true;
+                    txtNomeEl4InvNPC.Visible = true;
+                    txtDescEl4InvNPC.Visible = true;
+                    ddlRacIndEl4InvNPC.Visible = true;
+                    btnCreaEl4InvNPC.Visible = true;
+                    btnCreaEl4InvNPC.Enabled = true;
+                    #endregion
+                    break;
+                case "5":
+                    #region controllo_interfaccia
+                    lblNome6.Visible = true;
+                    lblDescrizione6.Visible = true;
+                    txtNomeEl1InvNPC.Visible = true;
+                    txtDescEl1InvNPC.Visible = true;
+                    ddlRacIndEl1InvNPC.Visible = true;
+                    btnCreaEl1InvNPC.Visible = true;
+                    btnCreaEl1InvNPC.Enabled = true;
+                    lblNome7.Visible = true;
+                    lblDescrizione7.Visible = true;
+                    txtNomeEl2InvNPC.Visible = true;
+                    txtDescEl2InvNPC.Visible = true;
+                    ddlRacIndEl2InvNPC.Visible = true;
+                    btnCreaEl2InvNPC.Visible = true;
+                    btnCreaEl2InvNPC.Enabled = true;
+                    lblNome8.Visible = true;
+                    lblDescrizione8.Visible = true;
+                    txtNomeEl3InvNPC.Visible = true;
+                    txtDescEl3InvNPC.Visible = true;
+                    ddlRacIndEl3InvNPC.Visible = true;
+                    btnCreaEl3InvNPC.Visible = true;
+                    btnCreaEl3InvNPC.Enabled = true;
+                    lblNome9.Visible = true;
+                    lblDescrizione9.Visible = true;
+                    txtNomeEl4InvNPC.Visible = true;
+                    txtDescEl4InvNPC.Visible = true;
+                    ddlRacIndEl4InvNPC.Visible = true;
+                    btnCreaEl4InvNPC.Visible = true;
+                    btnCreaEl4InvNPC.Enabled = true;
+                    txtNomeEl5InvNPC.Visible = true;
+                    lblNome10.Visible = true;
+                    lblDescrizione10.Visible = true;
+                    txtNomeEl5InvNPC.Visible = true;
+                    txtDescEl5InvNPC.Visible = true;
+                    ddlRacIndEl5InvNPC.Visible = true;
+                    btnCreaEl5InvNPC.Visible = true;
+                    btnCreaEl5InvNPC.Enabled = true;
+                    #endregion
+                    break;
+            }
+            #endregion
+        }
+
+        protected void btnCreaEl1InvNPC_Click(object sender, EventArgs e)
+        {
+            BottElInv(txtNomeEl1InvNPC, txtDescEl1InvNPC, btnCreaEl1InvNPC, "1");
+        }
+
+        protected void btnCreaEl2InvNPC_Click(object sender, EventArgs e)
+        {
+            BottElInv(txtNomeEl2InvNPC, txtDescEl2InvNPC, btnCreaEl2InvNPC, "2");
+        }
+
+        protected void btnCreaEl3InvNPC_Click(object sender, EventArgs e)
+        {
+            BottElInv(txtNomeEl3InvNPC, txtDescEl3InvNPC, btnCreaEl3InvNPC, "3");
+        }
+
+        protected void btnCreaEl4InvNPC_Click(object sender, EventArgs e)
+        {
+            BottElInv(txtNomeEl4InvNPC, txtDescEl4InvNPC, btnCreaEl4InvNPC, "4");
+        }
+
+        protected void btnCreaEl5InvNPC_Click(object sender, EventArgs e)
+        {
+            BottElInv(txtNomeEl5InvNPC, txtDescEl5InvNPC, btnCreaEl5InvNPC, "5");
         }
     }
 }
