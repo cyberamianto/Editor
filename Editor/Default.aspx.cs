@@ -24,25 +24,25 @@ namespace Editor
                 btnAmbiente.Enabled = true;
                 btnInventarioAmbiente.Enabled = false;
                 btnNPCAmbiente.Enabled = false;
-                btnInventarioNPC.Enabled = false;
                 Session["mappa"] = new Mappa();
                 Session["nAmb"] = 0;
+                Session["counterBtn"] = 1;
             }
             #endregion
         }
-        
+
         public void bott(Button btnMetodo, int r, int c)
         {
             Mappa mappa = (Mappa)Session["mappa"];
             if ((int)Session["nAmb"] > 0)
             {
-                switch(r)
+                switch (r)
                 {
                     case 0:
-                        switch(c)
+                        switch (c)
                         {
                             case 0:
-                                if(mappa.ambienti[0,1] != null || mappa.ambienti[1,0] != null)
+                                if (mappa.ambienti[0, 1] != null || mappa.ambienti[1, 0] != null)
                                 {
                                     Session["nAmb"] = (int)Session["nAmb"] + 1;
                                     btnMetodo.Text = $"Amb{(int)Session["nAmb"]}";
@@ -53,7 +53,7 @@ namespace Editor
                                 }
                                 break;
                             case 1:
-                                if (mappa.ambienti[0, 0] != null || mappa.ambienti[0, 2] != null || mappa.ambienti[1,1] != null)
+                                if (mappa.ambienti[0, 0] != null || mappa.ambienti[0, 2] != null || mappa.ambienti[1, 1] != null)
                                 {
                                     Session["nAmb"] = (int)Session["nAmb"] + 1;
                                     btnMetodo.Text = $"Amb{(int)Session["nAmb"]}";
@@ -248,9 +248,9 @@ namespace Editor
             Session["mappa"] = mappa;
         }
 
-        public void AttNPC(string i)
+        public void AttNPC(int i)
         {
-            if (ddlNumElementi.Text == i)
+            if (int.Parse(ddlNumElementi.Text) == i)
             {
                 #region controllo_interfaccia
                 lblNome1.Visible = false;
@@ -278,7 +278,7 @@ namespace Editor
                 ddlRacIndEl4Inv.Visible = false;
                 btnCreaEl4Inv.Visible = false;
                 txtNomeEl5Inv.Visible = false;
-                lblNome5.Visible = true;
+                lblNome5.Visible = false;
                 lblDescrizione5.Visible = false;
                 txtNomeEl5Inv.Visible = false;
                 txtDescEl5Inv.Visible = false;
@@ -289,17 +289,24 @@ namespace Editor
                 ddlInvAmb.Enabled = true;
                 ddlInvAmb.Items.Remove(ddlInvAmb.Text);
                 #endregion
+                Session["counterBtn"] = 1;
             }
-            if (ddlNumElementi.Text == i && ddlInvAmb.Text == "")
+            else
+            {
+                Session["counterBtn"] = (int)Session["counterBtn"] + 1;
+                return;
+            }
+            if (int.Parse(ddlNumElementi.Text) == i && ddlInvAmb.Text == "")
             {
                 pnInventarioAmbiente.Visible = false;
                 btnNPCAmbiente.Enabled = true;
+                Session["counterBtn"] = 1;
             }
         }
 
-        public void AttNPC1(string i)
+        public void AttNPC1(int i)
         {
-            if (ddlNumElementiInvNPC.Text == i)
+            if (int.Parse(ddlNumElementiInvNPC.Text) == i)
             {
                 #region controllo_interfaccia
                 lblNome6.Visible = false;
@@ -339,39 +346,83 @@ namespace Editor
                 btnCreaEl5InvNPC.Visible = false;
                 btnCreaEl5InvNPC.Enabled = false;
                 btnCreaNPC.Enabled = true;
+                pnInventarioNPC.Visible = false;
+                pnNPC.Enabled = true;
                 #endregion
+            }
+            else
+            {
+                Session["counterBtn"] = (int)Session["counterBtn"] + 1;
+                return;
             }
         }
 
-        public void BottElInv(TextBox txtNomeMetodo, TextBox txtDescMetodo, Button btnMetodo, string npc)
+        public void BottElInv(TextBox txtNomeMetodo, TextBox txtDescMetodo, Button btnMetodo, DropDownList ddlMetodo, int npc)
         {
-            Mappa mappa = (Mappa)Session["mappa"];
-            foreach (Ambiente x in mappa.ambienti)
+            if ((int)Session["counterBtn"] == npc)
             {
-                if (x != null)
+                Mappa mappa = (Mappa)Session["mappa"];
+                foreach (Ambiente x in mappa.ambienti)
                 {
-                    if (x.Nome == ddlInvAmb.Text)
+                    if (x != null)
                     {
-                        switch (ddlInvAmb.Text)
+                        if (x.Nome == ddlInvAmb.Text)
                         {
-                            case "Strutturale":
-                                x.InvAmbiente.Add(new Entity(txtNomeMetodo.Text, txtDescMetodo.Text, false, false));
-                                break;
-                            case "Raccoglibile":
-                                x.InvAmbiente.Add(new Entity(txtNomeMetodo.Text, txtDescMetodo.Text, true, false));
-                                break;
-                            case "Raccoglibile-Indossabile":
-                                x.InvAmbiente.Add(new Entity(txtNomeMetodo.Text, txtDescMetodo.Text, true, true));
-                                break;
+                            switch (ddlMetodo.Text)
+                            {
+                                case "Strutturale":
+                                    x.InvAmbiente.Add(new Entity(txtNomeMetodo.Text, txtDescMetodo.Text, false, false));
+                                    break;
+                                case "Raccoglibile":
+                                    x.InvAmbiente.Add(new Entity(txtNomeMetodo.Text, txtDescMetodo.Text, true, false));
+                                    break;
+                                case "Raccoglibile-Indossabile":
+                                    x.InvAmbiente.Add(new Entity(txtNomeMetodo.Text, txtDescMetodo.Text, true, true));
+                                    break;
+                            }
                         }
                     }
                 }
+                btnMetodo.Enabled = false;
+                AttNPC(npc);
+                Session["mappa"] = mappa;
             }
-            btnMetodo.Enabled = false;
-            AttNPC(npc);
-            Session["mappa"] = mappa;
         }
 
+        public void BottElInvNPC(TextBox txtNomeMetodo, TextBox txtDescMetodo, Button btnMetodo, DropDownList ddlMetodo, int npc)
+        {
+            if ((int)Session["counterBtn"] == npc)
+            {
+                Mappa mappa = (Mappa)Session["mappa"];
+                foreach (Ambiente x in mappa.ambienti)
+                {
+                    if (x != null)
+                    {
+                        if (x.Nome == ddlAmbNPC.Text)
+                        {
+                            foreach (NPC y in x.npcAmb)
+                            {
+                                if (y.Nome == txtNomeNPC.Text)
+                                {
+                                    switch (ddlMetodo.Text)
+                                    {
+                                        case "Indossabile":
+                                            y.Inv.Add(new Entity(txtNomeMetodo.Text, txtDescMetodo.Text, false, true));
+                                            break;
+                                        case "Arma":
+                                            y.Inv.Add(new Arma(txtNomeMetodo.Text, txtDescMetodo.Text, 7, 5));
+                                            break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                btnMetodo.Enabled = false;
+                AttNPC1(npc);
+                Session["mappa"] = mappa;
+            }
+        }
         protected void btnAmbiente_Click(object sender, EventArgs e)
         {
             #region getione_interfaccia
@@ -395,7 +446,7 @@ namespace Editor
             ddlNumElementi.Enabled = false;
             btnNumero.Enabled = false;
             ddlInvAmb.Enabled = false;
-            switch(ddlNumElementi.Text)
+            switch (ddlNumElementi.Text)
             {
                 case "1":
                     #region gestione_interfaccia
@@ -538,13 +589,13 @@ namespace Editor
         protected void btnAggiuntaSpecifiche_Click(object sender, EventArgs e)
         {
             Mappa mappa = (Mappa)Session["mappa"];
-            foreach(Ambiente x in mappa.ambienti)
+            foreach (Ambiente x in mappa.ambienti)
             {
                 if (x != null)
                 {
                     if (x.Nome == ddlScegliAmbiente.Text)
                     {
-                        if(txtNomeAmb.Text != "")
+                        if (txtNomeAmb.Text != "")
                             x.Nome = txtNomeAmb.Text;
                         x.Descrizione = txtDescrizioneAmb.Text;
                         x.Difficoltà = int.Parse(ddlDifficoltà.Text);
@@ -554,11 +605,11 @@ namespace Editor
             Session["mappa"] = mappa;
             ddlScegliAmbiente.Items.Remove(ddlScegliAmbiente.Text);
             ddlDifficoltà.SelectedIndex = 0;
-            if(ddlScegliAmbiente.Items.Count == 0)
+            if (ddlScegliAmbiente.Items.Count == 0)
             {
-                foreach(Ambiente x in mappa.ambienti)
+                foreach (Ambiente x in mappa.ambienti)
                 {
-                    if(x != null)
+                    if (x != null)
                     {
                         ddlInvAmb.Items.Add(x.Nome);
                         ddlAmbNPC.Items.Add(x.Nome);
@@ -655,27 +706,27 @@ namespace Editor
 
         protected void btnCreaEl1Inv_Click(object sender, EventArgs e)
         {
-            BottElInv(txtNomeEl1Inv, txtDescEl1Inv, btnCreaEl1Inv, "1");
+            BottElInv(txtNomeEl1Inv, txtDescEl1Inv, btnCreaEl1Inv, ddlRacIndEl1Inv, 1);
         }
 
         protected void btnCreaEl2Inv_Click(object sender, EventArgs e)
         {
-            BottElInv(txtNomeEl2Inv, txtDescEl2Inv, btnCreaEl2Inv, "2");
+            BottElInv(txtNomeEl2Inv, txtDescEl2Inv, btnCreaEl2Inv, ddlRacIndEl2Inv, 2);
         }
 
         protected void btnCreaEl3Inv_Click(object sender, EventArgs e)
         {
-            BottElInv(txtNomeEl3Inv, txtDescEl3Inv, btnCreaEl3Inv, "3");
+            BottElInv(txtNomeEl3Inv, txtDescEl3Inv, btnCreaEl3Inv, ddlRacIndEl3Inv, 3);
         }
 
         protected void btnCreaEl4Inv_Click(object sender, EventArgs e)
         {
-            BottElInv(txtNomeEl4Inv, txtDescEl4Inv, btnCreaEl4Inv, "4");
+            BottElInv(txtNomeEl4Inv, txtDescEl4Inv, btnCreaEl4Inv, ddlRacIndEl4Inv, 4);
         }
 
         protected void btnCreaEl5Inv_Click(object sender, EventArgs e)
         {
-            BottElInv(txtNomeEl5Inv, txtDescEl5Inv, btnCreaEl5Inv, "5");
+            BottElInv(txtNomeEl5Inv, txtDescEl5Inv, btnCreaEl5Inv, ddlRacIndEl5Inv, 5);
         }
 
         protected void btnNPCAmbiente_Click(object sender, EventArgs e)
@@ -707,7 +758,7 @@ namespace Editor
             ddlNumElementi.Enabled = false;
             btnNumero.Enabled = false;
             ddlInvAmb.Enabled = false;
-            switch (ddlNumElementi.Text)
+            switch (ddlNumElementiInvNPC.Text)
             {
                 case "1":
                     #region gestione_interfaccia
@@ -841,27 +892,27 @@ namespace Editor
 
         protected void btnCreaEl1InvNPC_Click(object sender, EventArgs e)
         {
-            BottElInv(txtNomeEl1InvNPC, txtDescEl1InvNPC, btnCreaEl1InvNPC, "1");
+            BottElInvNPC(txtNomeEl1InvNPC, txtDescEl1InvNPC, btnCreaEl1InvNPC, ddlRacIndEl1InvNPC, 1);
         }
 
         protected void btnCreaEl2InvNPC_Click(object sender, EventArgs e)
         {
-            BottElInv(txtNomeEl2InvNPC, txtDescEl2InvNPC, btnCreaEl2InvNPC, "2");
+            BottElInvNPC(txtNomeEl2InvNPC, txtDescEl2InvNPC, btnCreaEl2InvNPC, ddlRacIndEl2InvNPC, 2);
         }
 
         protected void btnCreaEl3InvNPC_Click(object sender, EventArgs e)
         {
-            BottElInv(txtNomeEl3InvNPC, txtDescEl3InvNPC, btnCreaEl3InvNPC, "3");
+            BottElInvNPC(txtNomeEl3InvNPC, txtDescEl3InvNPC, btnCreaEl3InvNPC, ddlRacIndEl3InvNPC, 3);
         }
 
         protected void btnCreaEl4InvNPC_Click(object sender, EventArgs e)
         {
-            BottElInv(txtNomeEl4InvNPC, txtDescEl4InvNPC, btnCreaEl4InvNPC, "4");
+            BottElInvNPC(txtNomeEl4InvNPC, txtDescEl4InvNPC, btnCreaEl4InvNPC, ddlRacIndEl4InvNPC, 4);
         }
 
         protected void btnCreaEl5InvNPC_Click(object sender, EventArgs e)
         {
-            BottElInv(txtNomeEl5InvNPC, txtDescEl5InvNPC, btnCreaEl5InvNPC, "5");
+            BottElInvNPC(txtNomeEl5InvNPC, txtDescEl5InvNPC, btnCreaEl5InvNPC, ddlRacIndEl5InvNPC, 5);
         }
     }
 }

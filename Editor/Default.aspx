@@ -9,14 +9,13 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div style="height: 1808px">
+        <div style="height: 1901px">
             <asp:Button ID="btnAmbiente" runat="server" Text="Ambiente" OnClick="btnAmbiente_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnInventarioAmbiente" runat="server" Text="Inventario Ambiente" OnClick="btnInventarioAmbiente_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnNPCAmbiente" runat="server" Text="NPC ambiente" OnClick="btnNPCAmbiente_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnInventarioNPC" runat="server" Text="Inventario NPC" />
             <br />
             <asp:Panel ID="Panel1" runat="server">
             </asp:Panel>
@@ -213,8 +212,6 @@
                 <asp:Button ID="btnCreaNPC" runat="server" OnClick="btnCreaNPC_Click" Text="Crea NPC" />
             </asp:Panel>
             <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            </div>
             <asp:Panel ID="pnInventarioNPC" runat="server">
                 &nbsp;
                 <asp:DropDownList ID="ddlNumElementiInvNPC" runat="server">
@@ -309,6 +306,10 @@
                 <br />
                 <br />
             </asp:Panel>
+            <br />
+            <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
     </form>
 </body>
 </html>
