@@ -8,7 +8,7 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" enctype="multipart/form-data">
         <div style="height: 1901px">
             <asp:Button ID="btnAmbiente" runat="server" Text="Ambiente" OnClick="btnAmbiente_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -16,6 +16,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:Button ID="btnNPCAmbiente" runat="server" Text="NPC ambiente" OnClick="btnNPCAmbiente_Click" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="btnPlayer" runat="server" OnClick="btnPlayer_Click" Text="Player" />
             <br />
             <asp:Panel ID="Panel1" runat="server">
             </asp:Panel>
@@ -71,10 +72,18 @@
                 </asp:DropDownList>
                 <br />
                 <asp:TextBox ID="txtDescrizioneAmb" runat="server" Height="157px" TextMode="MultiLine" Width="259px"></asp:TextBox>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                <asp:Image ID="imgAmb" runat="server" BorderStyle="None" style="max-height:150px;max-width:250px;height:auto;width:auto;"/>
                 <br />
+                <br />
+                <asp:FileUpload ID="fuAmb" accept="image/*" runat="server" />
+                &nbsp;
+                <asp:Button ID="btnCaricaImgAmb" runat="server" OnClick="btnCaricaImgAmb_Click" Text="Carica sfondo" />
                 <br />
                 <br />
                 <asp:Button ID="btnAggiuntaSpecifiche" runat="server" OnClick="btnAggiuntaSpecifiche_Click" Text="Aggiungi specifiche" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="lblErrAmb" runat="server"></asp:Label>
             </asp:Panel>
             <br />
             <br />
@@ -133,6 +142,35 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtDescEl5Inv" runat="server" Height="167px" TextMode="MultiLine" Visible="False" Width="202px"></asp:TextBox>
                 <br />
+                <asp:Image ID="imgEl1Inv" runat="server" BorderStyle="None" style="max-height:150px;max-width:250px;height:auto;width:auto;" Visible="False" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Image ID="imgEl2Inv" runat="server" BorderStyle="None" style="max-height:150px;max-width:250px;height:auto;width:auto;" Visible="False" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Image ID="imgEl3Inv" runat="server" BorderStyle="None" style="max-height:150px;max-width:250px;height:auto;width:auto;" Visible="False" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Image ID="imgEl4Inv" runat="server" BorderStyle="None" style="max-height:150px;max-width:250px;height:auto;width:auto;" Visible="False" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Image ID="imgEl5Inv" runat="server" BorderStyle="None" style="max-height:150px;max-width:250px;height:auto;width:auto;" Visible="False" />
+                <br />
+                <asp:FileUpload ID="fuEl1Inv" runat="server" accept="image/*" Visible="False" Width="242px" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:FileUpload ID="fuEl2Inv" runat="server" accept="image/*" Visible="False" Width="242px" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:FileUpload ID="fuEl3Inv" runat="server" accept="image/*" Visible="False" Width="242px" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:FileUpload ID="fuEl4Inv" runat="server" accept="image/*" Visible="False" Width="242px" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:FileUpload ID="fuEl5Inv" runat="server" accept="image/*" Visible="False" Width="242px" />
+                <br />
+                <asp:Button ID="btnCaricaImgEl1Inv" runat="server" OnClick="btnCaricaImgEl1Inv_Click" Text="Carica sfondo" Visible="False" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btnCaricaImgEl2Inv" runat="server" OnClick="btnCaricaImgEl2Inv_Click" Text="Carica sfondo" Visible="False" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btnCaricaImgEl3Inv" runat="server" OnClick="btnCaricaImgEl3Inv_Click" Text="Carica sfondo" Visible="False" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btnCaricaImgEl4Inv" runat="server" OnClick="btnCaricaImgEl4Inv_Click" Text="Carica sfondo" Visible="False" />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="btnCaricaImgEl5Inv" runat="server" OnClick="btnCaricaImgEl5Inv_Click" Text="Carica sfondo" Visible="False" />
                 <br />
                 <asp:DropDownList ID="ddlRacIndEl1Inv" runat="server" Visible="False">
                     <asp:ListItem>Strutturale</asp:ListItem>
@@ -307,6 +345,14 @@
                 <br />
             </asp:Panel>
             <br />
+            <asp:Panel ID="pnPlayer" runat="server">
+                <asp:TextBox ID="txtNomePlayer" runat="server"></asp:TextBox>
+                <br />
+                <asp:TextBox ID="txtDescPlayer" runat="server" Height="129px" TextMode="MultiLine" Width="209px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Button ID="btnCreaPlayer" runat="server" OnClick="btnCreaPlayer_Click" Text="Crea NPC" />
+            </asp:Panel>
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>

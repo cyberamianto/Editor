@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.IO;
 using VideoGame;
 
 namespace Editor
@@ -21,10 +22,13 @@ namespace Editor
                 pnInventarioAmbiente.Visible = false;
                 pnInventarioNPC.Visible = false;
                 pnNPC.Visible = false;
+                pnPlayer.Visible = false;
                 btnAmbiente.Enabled = true;
                 btnInventarioAmbiente.Enabled = false;
                 btnNPCAmbiente.Enabled = false;
+                btnPlayer.Enabled = false;
                 Session["mappa"] = new Mappa();
+                Session["player"] = null;
                 Session["nAmb"] = 0;
                 Session["counterBtn"] = 1;
             }
@@ -300,6 +304,7 @@ namespace Editor
             {
                 pnInventarioAmbiente.Visible = false;
                 btnNPCAmbiente.Enabled = true;
+                btnPlayer.Enabled = true;
                 Session["counterBtn"] = 1;
             }
         }
@@ -349,6 +354,7 @@ namespace Editor
                 pnInventarioNPC.Visible = false;
                 pnNPC.Enabled = true;
                 #endregion
+                Session["counterBtn"] = 1;
             }
             else
             {
@@ -357,7 +363,7 @@ namespace Editor
             }
         }
 
-        public void BottElInv(TextBox txtNomeMetodo, TextBox txtDescMetodo, Button btnMetodo, DropDownList ddlMetodo, int npc)
+        public void BottElInv(TextBox txtNomeMetodo, TextBox txtDescMetodo, Button btnMetodo, DropDownList ddlMetodo, string byteImgMetodo, int npc)
         {
             if ((int)Session["counterBtn"] == npc)
             {
@@ -380,6 +386,7 @@ namespace Editor
                                     x.InvAmbiente.Add(new Entity(txtNomeMetodo.Text, txtDescMetodo.Text, true, true));
                                     break;
                             }
+                            x.Background = (byte[])Session[byteImgMetodo];
                         }
                     }
                 }
@@ -423,6 +430,7 @@ namespace Editor
                 Session["mappa"] = mappa;
             }
         }
+
         protected void btnAmbiente_Click(object sender, EventArgs e)
         {
             #region getione_interfaccia
@@ -457,6 +465,11 @@ namespace Editor
                     ddlRacIndEl1Inv.Visible = true;
                     btnCreaEl1Inv.Visible = true;
                     btnCreaEl1Inv.Enabled = true;
+                    btnCaricaImgEl1Inv.Enabled = true;
+                    btnCaricaImgEl1Inv.Visible = true;
+                    fuEl1Inv.Enabled = true;
+                    fuEl1Inv.Visible = true;
+                    imgEl1Inv.Visible = true;
                     #endregion
                     break;
                 case "2":
@@ -468,6 +481,11 @@ namespace Editor
                     ddlRacIndEl1Inv.Visible = true;
                     btnCreaEl1Inv.Visible = true;
                     btnCreaEl1Inv.Enabled = true;
+                    btnCaricaImgEl1Inv.Enabled = true;
+                    btnCaricaImgEl1Inv.Visible = true;
+                    fuEl1Inv.Enabled = true;
+                    fuEl1Inv.Visible = true;
+                    imgEl1Inv.Visible = true;
                     lblNome2.Visible = true;
                     lblDescrizione2.Visible = true;
                     txtNomeEl2Inv.Visible = true;
@@ -475,6 +493,11 @@ namespace Editor
                     ddlRacIndEl2Inv.Visible = true;
                     btnCreaEl2Inv.Visible = true;
                     btnCreaEl2Inv.Enabled = true;
+                    btnCaricaImgEl2Inv.Enabled = true;
+                    btnCaricaImgEl2Inv.Visible = true;
+                    fuEl2Inv.Enabled = true;
+                    fuEl2Inv.Visible = true;
+                    imgEl2Inv.Visible = true;
                     #endregion
                     break;
                 case "3":
@@ -486,6 +509,11 @@ namespace Editor
                     ddlRacIndEl1Inv.Visible = true;
                     btnCreaEl1Inv.Visible = true;
                     btnCreaEl1Inv.Enabled = true;
+                    btnCaricaImgEl1Inv.Enabled = true;
+                    btnCaricaImgEl1Inv.Visible = true;
+                    fuEl1Inv.Enabled = true;
+                    fuEl1Inv.Visible = true;
+                    imgEl1Inv.Visible = true;
                     lblNome2.Visible = true;
                     lblDescrizione2.Visible = true;
                     txtNomeEl2Inv.Visible = true;
@@ -493,6 +521,11 @@ namespace Editor
                     ddlRacIndEl2Inv.Visible = true;
                     btnCreaEl2Inv.Visible = true;
                     btnCreaEl2Inv.Enabled = true;
+                    btnCaricaImgEl2Inv.Enabled = true;
+                    btnCaricaImgEl2Inv.Visible = true;
+                    fuEl2Inv.Enabled = true;
+                    fuEl2Inv.Visible = true;
+                    imgEl2Inv.Visible = true;
                     lblNome3.Visible = true;
                     lblDescrizione3.Visible = true;
                     txtNomeEl3Inv.Visible = true;
@@ -500,6 +533,12 @@ namespace Editor
                     ddlRacIndEl3Inv.Visible = true;
                     btnCreaEl3Inv.Visible = true;
                     btnCreaEl3Inv.Enabled = true;
+                    btnCaricaImgEl3Inv.Enabled = true;
+                    btnCaricaImgEl3Inv.Visible = true;
+                    fuEl3Inv.Enabled = true;
+                    fuEl3Inv.Visible = true;
+                    imgEl3Inv.Visible = true;
+
                     #endregion
                     break;
                 case "4":
@@ -511,6 +550,11 @@ namespace Editor
                     ddlRacIndEl1Inv.Visible = true;
                     btnCreaEl1Inv.Visible = true;
                     btnCreaEl1Inv.Enabled = true;
+                    btnCaricaImgEl1Inv.Enabled = true;
+                    btnCaricaImgEl1Inv.Visible = true;
+                    fuEl1Inv.Enabled = true;
+                    fuEl1Inv.Visible = true;
+                    imgEl1Inv.Visible = true;
                     lblNome2.Visible = true;
                     lblDescrizione2.Visible = true;
                     txtNomeEl2Inv.Visible = true;
@@ -518,6 +562,11 @@ namespace Editor
                     ddlRacIndEl2Inv.Visible = true;
                     btnCreaEl2Inv.Visible = true;
                     btnCreaEl2Inv.Enabled = true;
+                    btnCaricaImgEl2Inv.Enabled = true;
+                    btnCaricaImgEl2Inv.Visible = true;
+                    fuEl2Inv.Enabled = true;
+                    fuEl2Inv.Visible = true;
+                    imgEl2Inv.Visible = true;
                     lblNome3.Visible = true;
                     lblDescrizione3.Visible = true;
                     txtNomeEl3Inv.Visible = true;
@@ -525,6 +574,11 @@ namespace Editor
                     ddlRacIndEl3Inv.Visible = true;
                     btnCreaEl3Inv.Visible = true;
                     btnCreaEl3Inv.Enabled = true;
+                    btnCaricaImgEl3Inv.Enabled = true;
+                    btnCaricaImgEl3Inv.Visible = true;
+                    fuEl3Inv.Enabled = true;
+                    fuEl3Inv.Visible = true;
+                    imgEl3Inv.Visible = true;
                     lblNome4.Visible = true;
                     lblDescrizione4.Visible = true;
                     txtNomeEl4Inv.Visible = true;
@@ -532,6 +586,11 @@ namespace Editor
                     ddlRacIndEl4Inv.Visible = true;
                     btnCreaEl4Inv.Visible = true;
                     btnCreaEl4Inv.Enabled = true;
+                    btnCaricaImgEl4Inv.Enabled = true;
+                    btnCaricaImgEl4Inv.Visible = true;
+                    fuEl4Inv.Enabled = true;
+                    fuEl4Inv.Visible = true;
+                    imgEl4Inv.Visible = true;
                     #endregion
                     break;
                 case "5":
@@ -543,6 +602,11 @@ namespace Editor
                     ddlRacIndEl1Inv.Visible = true;
                     btnCreaEl1Inv.Visible = true;
                     btnCreaEl1Inv.Enabled = true;
+                    btnCaricaImgEl1Inv.Enabled = true;
+                    btnCaricaImgEl1Inv.Visible = true;
+                    fuEl1Inv.Enabled = true;
+                    fuEl1Inv.Visible = true;
+                    imgEl1Inv.Visible = true;
                     lblNome2.Visible = true;
                     lblDescrizione2.Visible = true;
                     txtNomeEl2Inv.Visible = true;
@@ -550,6 +614,11 @@ namespace Editor
                     ddlRacIndEl2Inv.Visible = true;
                     btnCreaEl2Inv.Visible = true;
                     btnCreaEl2Inv.Enabled = true;
+                    btnCaricaImgEl2Inv.Enabled = true;
+                    btnCaricaImgEl2Inv.Visible = true;
+                    fuEl2Inv.Enabled = true;
+                    fuEl2Inv.Visible = true;
+                    imgEl2Inv.Visible = true;
                     lblNome3.Visible = true;
                     lblDescrizione3.Visible = true;
                     txtNomeEl3Inv.Visible = true;
@@ -557,6 +626,11 @@ namespace Editor
                     ddlRacIndEl3Inv.Visible = true;
                     btnCreaEl3Inv.Visible = true;
                     btnCreaEl3Inv.Enabled = true;
+                    btnCaricaImgEl3Inv.Enabled = true;
+                    btnCaricaImgEl3Inv.Visible = true;
+                    fuEl3Inv.Enabled = true;
+                    fuEl3Inv.Visible = true;
+                    imgEl3Inv.Visible = true;
                     lblNome4.Visible = true;
                     lblDescrizione4.Visible = true;
                     txtNomeEl4Inv.Visible = true;
@@ -565,12 +639,23 @@ namespace Editor
                     btnCreaEl4Inv.Visible = true;
                     btnCreaEl4Inv.Enabled = true;
                     txtNomeEl5Inv.Visible = true;
+                    btnCaricaImgEl4Inv.Enabled = true;
+                    btnCaricaImgEl4Inv.Visible = true;
+                    fuEl4Inv.Enabled = true;
+                    fuEl4Inv.Visible = true;
+                    imgEl4Inv.Visible = true;
+                    lblNome5.Visible = true;
                     lblDescrizione5.Visible = true;
                     txtNomeEl5Inv.Visible = true;
                     txtDescEl5Inv.Visible = true;
                     ddlRacIndEl5Inv.Visible = true;
                     btnCreaEl5Inv.Visible = true;
                     btnCreaEl5Inv.Enabled = true;
+                    btnCaricaImgEl5Inv.Enabled = true;
+                    btnCaricaImgEl5Inv.Visible = true;
+                    fuEl5Inv.Enabled = true;
+                    fuEl5Inv.Visible = true;
+                    imgEl5Inv.Visible = true;
                     #endregion
                     break;
             }
@@ -595,16 +680,43 @@ namespace Editor
                 {
                     if (x.Nome == ddlScegliAmbiente.Text)
                     {
-                        if (txtNomeAmb.Text != "")
+                        bool ok = true;
+                        foreach (Ambiente y in mappa.ambienti)
+                        {
+                            if(y != null)
+                            {
+                                if(y.Nome == txtNomeAmb.Text)
+                                {
+                                    ok = false;
+                                    break;
+                                }
+                            }
+                        }
+                        if (txtNomeAmb.Text != "" && ok)
+                        {
                             x.Nome = txtNomeAmb.Text;
-                        x.Descrizione = txtDescrizioneAmb.Text;
-                        x.Difficoltà = int.Parse(ddlDifficoltà.Text);
+                            x.Descrizione = txtDescrizioneAmb.Text;
+                            x.Difficoltà = int.Parse(ddlDifficoltà.Text);
+                            if(fuAmb.HasFile)
+                            {
+                                byte[] b = fuAmb.FileBytes;
+                                imgAmb.ImageUrl = "data:image;base64," + Convert.ToBase64String(b);
+                            }
+                            lblErrAmb.Text = "";
+                        }
+                        else
+                        {
+                            lblErrAmb.Text = "Errore! Inserire nomi diversi per i diversi ambienti!";
+                            return;
+                        }
                     }
                 }
             }
             Session["mappa"] = mappa;
             ddlScegliAmbiente.Items.Remove(ddlScegliAmbiente.Text);
             ddlDifficoltà.SelectedIndex = 0;
+            txtNomeAmb.Text = "";
+            txtDescrizioneAmb.Text = "";
             if (ddlScegliAmbiente.Items.Count == 0)
             {
                 foreach (Ambiente x in mappa.ambienti)
@@ -706,27 +818,27 @@ namespace Editor
 
         protected void btnCreaEl1Inv_Click(object sender, EventArgs e)
         {
-            BottElInv(txtNomeEl1Inv, txtDescEl1Inv, btnCreaEl1Inv, ddlRacIndEl1Inv, 1);
+            BottElInv(txtNomeEl1Inv, txtDescEl1Inv, btnCreaEl1Inv, ddlRacIndEl1Inv, "byteImgEl1", 1);
         }
 
         protected void btnCreaEl2Inv_Click(object sender, EventArgs e)
         {
-            BottElInv(txtNomeEl2Inv, txtDescEl2Inv, btnCreaEl2Inv, ddlRacIndEl2Inv, 2);
+            BottElInv(txtNomeEl2Inv, txtDescEl2Inv, btnCreaEl2Inv, ddlRacIndEl2Inv, "byteImgEl2", 2);
         }
 
         protected void btnCreaEl3Inv_Click(object sender, EventArgs e)
         {
-            BottElInv(txtNomeEl3Inv, txtDescEl3Inv, btnCreaEl3Inv, ddlRacIndEl3Inv, 3);
+            BottElInv(txtNomeEl3Inv, txtDescEl3Inv, btnCreaEl3Inv, ddlRacIndEl3Inv, "byteImgEl3", 3);
         }
 
         protected void btnCreaEl4Inv_Click(object sender, EventArgs e)
         {
-            BottElInv(txtNomeEl4Inv, txtDescEl4Inv, btnCreaEl4Inv, ddlRacIndEl4Inv, 4);
+            BottElInv(txtNomeEl4Inv, txtDescEl4Inv, btnCreaEl4Inv, ddlRacIndEl4Inv, "byteImgEl4", 4);
         }
 
         protected void btnCreaEl5Inv_Click(object sender, EventArgs e)
         {
-            BottElInv(txtNomeEl5Inv, txtDescEl5Inv, btnCreaEl5Inv, ddlRacIndEl5Inv, 5);
+            BottElInv(txtNomeEl5Inv, txtDescEl5Inv, btnCreaEl5Inv, ddlRacIndEl5Inv, "byteImgEl5", 5);
         }
 
         protected void btnNPCAmbiente_Click(object sender, EventArgs e)
@@ -769,6 +881,11 @@ namespace Editor
                     ddlRacIndEl1InvNPC.Visible = true;
                     btnCreaEl1InvNPC.Visible = true;
                     btnCreaEl1InvNPC.Enabled = true;
+                    //btnCaricaImgEl1InvNPC.Enabled = true;
+                    //btnCaricaImgEl1InvNPC.Visible = true;
+                    //fuEl1InvNPC.Enabled = true;
+                    //fuEl1InvNPC.Visible = true;
+                    //imgEl1InvNPC.Visible = true;
                     #endregion
                     break;
                 case "2":
@@ -780,6 +897,11 @@ namespace Editor
                     ddlRacIndEl1InvNPC.Visible = true;
                     btnCreaEl1InvNPC.Visible = true;
                     btnCreaEl1InvNPC.Enabled = true;
+                    //btnCaricaImgEl1InvNPC.Enabled = true;
+                    //btnCaricaImgEl1InvNPC.Visible = true;
+                    //fuEl1InvNPC.Enabled = true;
+                    //fuEl1InvNPC.Visible = true;
+                    //imgEl1InvNPC.Visible = true;
                     lblNome7.Visible = true;
                     lblDescrizione7.Visible = true;
                     txtNomeEl2InvNPC.Visible = true;
@@ -787,6 +909,11 @@ namespace Editor
                     ddlRacIndEl2InvNPC.Visible = true;
                     btnCreaEl2InvNPC.Visible = true;
                     btnCreaEl2InvNPC.Enabled = true;
+                    //btnCaricaImgEl2InvNPC.Enabled = true;
+                    //btnCaricaImgEl2InvNPC.Visible = true;
+                    //fuEl2InvNPC.Enabled = true;
+                    //fuEl2InvNPC.Visible = true;
+                    //imgEl2InvNPC.Visible = true;
                     #endregion
                     break;
                 case "3":
@@ -798,6 +925,11 @@ namespace Editor
                     ddlRacIndEl1InvNPC.Visible = true;
                     btnCreaEl1InvNPC.Visible = true;
                     btnCreaEl1InvNPC.Enabled = true;
+                    //btnCaricaImgEl1InvNPC.Enabled = true;
+                    //btnCaricaImgEl1InvNPC.Visible = true;
+                    //fuEl1InvNPC.Enabled = true;
+                    //fuEl1InvNPC.Visible = true;
+                    //imgEl1InvNPC.Visible = true;
                     lblNome7.Visible = true;
                     lblDescrizione7.Visible = true;
                     txtNomeEl2InvNPC.Visible = true;
@@ -805,6 +937,11 @@ namespace Editor
                     ddlRacIndEl2InvNPC.Visible = true;
                     btnCreaEl2InvNPC.Visible = true;
                     btnCreaEl2InvNPC.Enabled = true;
+                    //btnCaricaImgEl2InvNPC.Enabled = true;
+                    //btnCaricaImgEl2InvNPC.Visible = true;
+                    //fuEl2InvNPC.Enabled = true;
+                    //fuEl2InvNPC.Visible = true;
+                    //imgEl2InvNPC.Visible = true;
                     lblNome8.Visible = true;
                     lblDescrizione8.Visible = true;
                     txtNomeEl3InvNPC.Visible = true;
@@ -812,6 +949,11 @@ namespace Editor
                     ddlRacIndEl3InvNPC.Visible = true;
                     btnCreaEl3InvNPC.Visible = true;
                     btnCreaEl3InvNPC.Enabled = true;
+                    //btnCaricaImgEl3InvNPC.Enabled = true;
+                    //btnCaricaImgEl3InvNPC.Visible = true;
+                    //fuEl3InvNPC.Enabled = true;
+                    //fuEl3InvNPC.Visible = true;
+                    //imgEl3InvNPC.Visible = true;
                     #endregion
                     break;
                 case "4":
@@ -823,6 +965,11 @@ namespace Editor
                     ddlRacIndEl1InvNPC.Visible = true;
                     btnCreaEl1InvNPC.Visible = true;
                     btnCreaEl1InvNPC.Enabled = true;
+                    //btnCaricaImgEl1InvNPC.Enabled = true;
+                    //btnCaricaImgEl1InvNPC.Visible = true;
+                    //fuEl1InvNPC.Enabled = true;
+                    //fuEl1InvNPC.Visible = true;
+                    //imgEl1InvNPC.Visible = true;
                     lblNome7.Visible = true;
                     lblDescrizione7.Visible = true;
                     txtNomeEl2InvNPC.Visible = true;
@@ -830,6 +977,11 @@ namespace Editor
                     ddlRacIndEl2InvNPC.Visible = true;
                     btnCreaEl2InvNPC.Visible = true;
                     btnCreaEl2InvNPC.Enabled = true;
+                    //btnCaricaImgEl2InvNPC.Enabled = true;
+                    //btnCaricaImgEl2InvNPC.Visible = true;
+                    //fuEl2InvNPC.Enabled = true;
+                    //fuEl2InvNPC.Visible = true;
+                    //imgEl2InvNPC.Visible = true;
                     lblNome8.Visible = true;
                     lblDescrizione8.Visible = true;
                     txtNomeEl3InvNPC.Visible = true;
@@ -837,6 +989,11 @@ namespace Editor
                     ddlRacIndEl3InvNPC.Visible = true;
                     btnCreaEl3InvNPC.Visible = true;
                     btnCreaEl3InvNPC.Enabled = true;
+                    //btnCaricaImgEl3InvNPC.Enabled = true;
+                    //btnCaricaImgEl3InvNPC.Visible = true;
+                    //fuEl3InvNPC.Enabled = true;
+                    //fuEl3InvNPC.Visible = true;
+                    //imgEl3InvNPC.Visible = true;
                     lblNome9.Visible = true;
                     lblDescrizione9.Visible = true;
                     txtNomeEl4InvNPC.Visible = true;
@@ -844,6 +1001,11 @@ namespace Editor
                     ddlRacIndEl4InvNPC.Visible = true;
                     btnCreaEl4InvNPC.Visible = true;
                     btnCreaEl4InvNPC.Enabled = true;
+                    //btnCaricaImgEl4InvNPC.Enabled = true;
+                    //btnCaricaImgEl4InvNPC.Visible = true;
+                    //fuEl4InvNPC.Enabled = true;
+                    //fuEl4InvNPC.Visible = true;
+                    //imgEl4InvNPC.Visible = true;
                     #endregion
                     break;
                 case "5":
@@ -855,6 +1017,11 @@ namespace Editor
                     ddlRacIndEl1InvNPC.Visible = true;
                     btnCreaEl1InvNPC.Visible = true;
                     btnCreaEl1InvNPC.Enabled = true;
+                    //btnCaricaImgEl1InvNPC.Enabled = true;
+                    //btnCaricaImgEl1InvNPC.Visible = true;
+                    //fuEl1InvNPC.Enabled = true;
+                    //fuEl1InvNPC.Visible = true;
+                    //imgEl1InvNPC.Visible = true;
                     lblNome7.Visible = true;
                     lblDescrizione7.Visible = true;
                     txtNomeEl2InvNPC.Visible = true;
@@ -862,6 +1029,11 @@ namespace Editor
                     ddlRacIndEl2InvNPC.Visible = true;
                     btnCreaEl2InvNPC.Visible = true;
                     btnCreaEl2InvNPC.Enabled = true;
+                    //btnCaricaImgEl2InvNPC.Enabled = true;
+                    //btnCaricaImgEl2InvNPC.Visible = true;
+                    //fuEl2InvNPC.Enabled = true;
+                    //fuEl2InvNPC.Visible = true;
+                    //imgEl2InvNPC.Visible = true;
                     lblNome8.Visible = true;
                     lblDescrizione8.Visible = true;
                     txtNomeEl3InvNPC.Visible = true;
@@ -869,6 +1041,11 @@ namespace Editor
                     ddlRacIndEl3InvNPC.Visible = true;
                     btnCreaEl3InvNPC.Visible = true;
                     btnCreaEl3InvNPC.Enabled = true;
+                    //btnCaricaImgEl3InvNPC.Enabled = true;
+                    //btnCaricaImgEl3InvNPC.Visible = true;
+                    //fuEl3InvNPC.Enabled = true;
+                    //fuEl3InvNPC.Visible = true;
+                    //imgEl3InvNPC.Visible = true;
                     lblNome9.Visible = true;
                     lblDescrizione9.Visible = true;
                     txtNomeEl4InvNPC.Visible = true;
@@ -877,6 +1054,11 @@ namespace Editor
                     btnCreaEl4InvNPC.Visible = true;
                     btnCreaEl4InvNPC.Enabled = true;
                     txtNomeEl5InvNPC.Visible = true;
+                    //btnCaricaImgEl4InvNPC.Enabled = true;
+                    //btnCaricaImgEl4InvNPC.Visible = true;
+                    //fuEl4InvNPC.Enabled = true;
+                    //fuEl4InvNPC.Visible = true;
+                    //imgEl4InvNPC.Visible = true;
                     lblNome10.Visible = true;
                     lblDescrizione10.Visible = true;
                     txtNomeEl5InvNPC.Visible = true;
@@ -884,6 +1066,11 @@ namespace Editor
                     ddlRacIndEl5InvNPC.Visible = true;
                     btnCreaEl5InvNPC.Visible = true;
                     btnCreaEl5InvNPC.Enabled = true;
+                    //btnCaricaImgEl5InvNPC.Enabled = true;
+                    //btnCaricaImgEl5InvNPC.Visible = true;
+                    //fuEl5InvNPC.Enabled = true;
+                    //fuEl5InvNPC.Visible = true;
+                    //imgEl5InvNPC.Visible = true;
                     #endregion
                     break;
             }
@@ -913,6 +1100,72 @@ namespace Editor
         protected void btnCreaEl5InvNPC_Click(object sender, EventArgs e)
         {
             BottElInvNPC(txtNomeEl5InvNPC, txtDescEl5InvNPC, btnCreaEl5InvNPC, ddlRacIndEl5InvNPC, 5);
+        }
+
+        protected void btnPlayer_Click(object sender, EventArgs e)
+        {
+            pnNPC.Visible = false;
+            pnInventarioNPC.Visible = false;
+            pnPlayer.Visible = true;
+        }
+
+        protected void btnCreaPlayer_Click(object sender, EventArgs e)
+        {
+            Session["player"] = new Player(txtNomePlayer.Text, txtDescPlayer.Text, 0);
+        }
+
+        protected void btnCaricaImgAmb_Click(object sender, EventArgs e)
+        {
+            if (fuAmb.HasFile)
+            {
+                byte[] b = fuAmb.FileBytes;
+                imgAmb.ImageUrl = "data:image;base64," + Convert.ToBase64String(b);
+            }
+        }
+
+        protected void btnCaricaImgEl1Inv_Click(object sender, EventArgs e)
+        {
+            if (fuEl1Inv.HasFile)
+            {
+                Session["byteImgEl1"] = fuEl1Inv.FileBytes;
+                imgEl1Inv.ImageUrl = "data:image;base64," + Convert.ToBase64String((byte[])Session["byteImgEl1"]);
+            }
+        }
+
+        protected void btnCaricaImgEl2Inv_Click(object sender, EventArgs e)
+        {
+            if (fuEl2Inv.HasFile)
+            {
+                Session["byteImgEl2"] = fuEl2Inv.FileBytes;
+                imgEl2Inv.ImageUrl = "data:image;base64," + Convert.ToBase64String((byte[])Session["byteImgEl2"]);
+            }
+        }
+
+        protected void btnCaricaImgEl3Inv_Click(object sender, EventArgs e)
+        {
+            if (fuEl3Inv.HasFile)
+            {
+                Session["byteImgEl3"] = fuEl3Inv.FileBytes;
+                imgEl3Inv.ImageUrl = "data:image;base64," + Convert.ToBase64String((byte[])Session["byteImgEl3"]);
+            }
+        }
+
+        protected void btnCaricaImgEl4Inv_Click(object sender, EventArgs e)
+        {
+            if (fuEl4Inv.HasFile)
+            {
+                Session["byteImgEl4"] = fuEl4Inv.FileBytes;
+                imgEl4Inv.ImageUrl = "data:image;base64," + Convert.ToBase64String((byte[])Session["byteImgEl4"]);
+            }
+        }
+
+        protected void btnCaricaImgEl5Inv_Click(object sender, EventArgs e)
+        {
+            if (fuEl5Inv.HasFile)
+            {
+                Session["byteImgEl5"] = fuEl5Inv.FileBytes;
+                imgEl5Inv.ImageUrl = "data:image;base64," + Convert.ToBase64String((byte[])Session["byteImgEl5"]);
+            }
         }
     }
 }
