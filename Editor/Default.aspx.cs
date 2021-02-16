@@ -35,7 +35,7 @@ namespace Editor
             #endregion
         }
 
-        public void bott(Button btnMetodo, int r, int c)
+        public void BottMat(Button btnMetodo, int r, int c)
         {
             Mappa mappa = (Mappa)Session["mappa"];
             if ((int)Session["nAmb"] > 0)
@@ -717,6 +717,7 @@ namespace Editor
             ddlDifficoltà.SelectedIndex = 0;
             txtNomeAmb.Text = "";
             txtDescrizioneAmb.Text = "";
+            imgAmb.Visible = false;
             if (ddlScegliAmbiente.Items.Count == 0)
             {
                 foreach (Ambiente x in mappa.ambienti)
@@ -737,82 +738,82 @@ namespace Editor
         #region rapp_mat
         protected void btn00_Click(object sender, EventArgs e)
         {
-            bott(btn00, 0, 0);
+            BottMat(btn00, 0, 0);
         }
 
         protected void btn01_Click(object sender, EventArgs e)
         {
-            bott(btn01, 0, 1);
+            BottMat(btn01, 0, 1);
         }
 
         protected void btn02_Click(object sender, EventArgs e)
         {
-            bott(btn02, 0, 2);
+            BottMat(btn02, 0, 2);
         }
 
         protected void btn03_Click(object sender, EventArgs e)
         {
-            bott(btn03, 0, 3);
+            BottMat(btn03, 0, 3);
         }
 
         protected void btn10_Click(object sender, EventArgs e)
         {
-            bott(btn10, 1, 0);
+            BottMat(btn10, 1, 0);
         }
 
         protected void btn11_Click(object sender, EventArgs e)
         {
-            bott(btn11, 1, 1);
+            BottMat(btn11, 1, 1);
         }
 
         protected void btn12_Click(object sender, EventArgs e)
         {
-            bott(btn12, 1, 2);
+            BottMat(btn12, 1, 2);
         }
 
         protected void btn13_Click(object sender, EventArgs e)
         {
-            bott(btn13, 1, 3);
+            BottMat(btn13, 1, 3);
         }
 
         protected void btn20_Click(object sender, EventArgs e)
         {
-            bott(btn20, 2, 0);
+            BottMat(btn20, 2, 0);
         }
 
         protected void btn21_Click(object sender, EventArgs e)
         {
-            bott(btn21, 2, 1);
+            BottMat(btn21, 2, 1);
         }
 
         protected void btn22_Click(object sender, EventArgs e)
         {
-            bott(btn22, 2, 2);
+            BottMat(btn22, 2, 2);
         }
 
         protected void btn23_Click(object sender, EventArgs e)
         {
-            bott(btn23, 2, 3);
+            BottMat(btn23, 2, 3);
         }
 
         protected void btn30_Click(object sender, EventArgs e)
         {
-            bott(btn30, 3, 0);
+            BottMat(btn30, 3, 0);
         }
 
         protected void btn31_Click(object sender, EventArgs e)
         {
-            bott(btn31, 3, 1);
+            BottMat(btn31, 3, 1);
         }
 
         protected void btn32_Click(object sender, EventArgs e)
         {
-            bott(btn32, 3, 2);
+            BottMat(btn32, 3, 2);
         }
 
         protected void btn33_Click(object sender, EventArgs e)
         {
-            bott(btn33, 3, 3);
+            BottMat(btn33, 3, 3);
         }
         #endregion
 
@@ -1118,6 +1119,7 @@ namespace Editor
         {
             if (fuAmb.HasFile)
             {
+                imgAmb.Visible = true;
                 byte[] b = fuAmb.FileBytes;
                 imgAmb.ImageUrl = "data:image;base64," + Convert.ToBase64String(b);
             }
