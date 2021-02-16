@@ -426,8 +426,18 @@ namespace Editor
                     }
                 }
                 btnMetodo.Enabled = false;
+
                 AttNPC1(npc);
                 Session["mappa"] = mappa;
+            }
+        }
+
+        public void CaricaImgInv(string byteImg, FileUpload fuMetodo, Image imgMetodo)
+        {
+            if (fuEl1Inv.HasFile)
+            {
+                Session[byteImg] = fuMetodo.FileBytes;
+                imgMetodo.ImageUrl = "data:image;base64," + Convert.ToBase64String((byte[])Session[byteImg]);
             }
         }
 
@@ -1127,47 +1137,27 @@ namespace Editor
 
         protected void btnCaricaImgEl1Inv_Click(object sender, EventArgs e)
         {
-            if (fuEl1Inv.HasFile)
-            {
-                Session["byteImgEl1"] = fuEl1Inv.FileBytes;
-                imgEl1Inv.ImageUrl = "data:image;base64," + Convert.ToBase64String((byte[])Session["byteImgEl1"]);
-            }
+            CaricaImgInv("byteImgEl1", fuEl1Inv, imgEl1Inv);
         }
 
         protected void btnCaricaImgEl2Inv_Click(object sender, EventArgs e)
         {
-            if (fuEl2Inv.HasFile)
-            {
-                Session["byteImgEl2"] = fuEl2Inv.FileBytes;
-                imgEl2Inv.ImageUrl = "data:image;base64," + Convert.ToBase64String((byte[])Session["byteImgEl2"]);
-            }
+            CaricaImgInv("byteImgEl2", fuEl2Inv, imgEl2Inv);
         }
 
         protected void btnCaricaImgEl3Inv_Click(object sender, EventArgs e)
         {
-            if (fuEl3Inv.HasFile)
-            {
-                Session["byteImgEl3"] = fuEl3Inv.FileBytes;
-                imgEl3Inv.ImageUrl = "data:image;base64," + Convert.ToBase64String((byte[])Session["byteImgEl3"]);
-            }
+            CaricaImgInv("byteImgEl3", fuEl3Inv, imgEl3Inv);
         }
 
         protected void btnCaricaImgEl4Inv_Click(object sender, EventArgs e)
         {
-            if (fuEl4Inv.HasFile)
-            {
-                Session["byteImgEl4"] = fuEl4Inv.FileBytes;
-                imgEl4Inv.ImageUrl = "data:image;base64," + Convert.ToBase64String((byte[])Session["byteImgEl4"]);
-            }
+            CaricaImgInv("byteImgEl4", fuEl4Inv, imgEl4Inv);
         }
 
         protected void btnCaricaImgEl5Inv_Click(object sender, EventArgs e)
         {
-            if (fuEl5Inv.HasFile)
-            {
-                Session["byteImgEl5"] = fuEl5Inv.FileBytes;
-                imgEl5Inv.ImageUrl = "data:image;base64," + Convert.ToBase64String((byte[])Session["byteImgEl5"]);
-            }
+            CaricaImgInv("byteImgEl5", fuEl5Inv, imgEl5Inv);
         }
     }
 }
