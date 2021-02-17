@@ -6,6 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.IO;
 using VideoGame;
+using System.Runtime.Serialization;
+using System.Xml;
 
 namespace Editor
 {
@@ -27,7 +29,7 @@ namespace Editor
                 btnInventarioAmbiente.Enabled = false;
                 btnNPCAmbiente.Enabled = false;
                 btnPlayer.Enabled = false;
-                Session["mappa"] = new Mappa();
+                Session["mappa"] = new Mappa(new Player("", "", 0, ""));
                 Session["player"] = null;
                 Session["nAmb"] = 0;
                 Session["counterBtn"] = 1;
@@ -434,10 +436,10 @@ namespace Editor
 
         public void CaricaImgInv(string byteImg, FileUpload fuMetodo, Image imgMetodo)
         {
-            if (fuEl1Inv.HasFile)
+            if (fuMetodo.HasFile)
             {
-                Session[byteImg] = fuMetodo.FileBytes;
-                imgMetodo.ImageUrl = "data:image;base64," + Convert.ToBase64String((byte[])Session[byteImg]);
+                //Session[byteImg] = fuMetodo.FileBytes;
+                imgMetodo.ImageUrl = "data:image;base64," + Convert.ToBase64String(fuMetodo.FileBytes/*(byte[])Session[byteImg]*/);
             }
         }
 
@@ -678,6 +680,7 @@ namespace Editor
             btnCreaMappa.Visible = false;
             pnAmbienteGenerale.Enabled = false;
             pnAmbienteSpecifico.Visible = true;
+            btnAggiuntaSpecifiche.Enabled = false;
             #endregion
         }
 
@@ -728,6 +731,8 @@ namespace Editor
             txtNomeAmb.Text = "";
             txtDescrizioneAmb.Text = "";
             imgAmb.Visible = false;
+            btnAggiuntaSpecifiche.Enabled = false;
+            fuAmb.Enabled = true;
             if (ddlScegliAmbiente.Items.Count == 0)
             {
                 foreach (Ambiente x in mappa.ambienti)
@@ -736,6 +741,7 @@ namespace Editor
                     {
                         ddlInvAmb.Items.Add(x.Nome);
                         ddlAmbNPC.Items.Add(x.Nome);
+                        ddlAmbInitPlayer.Items.Add(x.Nome);
                     }
                 }
                 ddlScegliAmbiente.Items.Add("Ambienti terminati");
@@ -866,7 +872,19 @@ namespace Editor
                 {
                     if (x.Nome == ddlAmbNPC.Text)
                     {
-                        x.npcAmb.Add(new NPC(txtNomeNPC.Text, ddlSaluteNPC.Text, int.Parse(ddlLivelloEsp.Text), txtDescNPC.Text, ddlAmbNPC.Text));
+                        bool ok = true;
+                        foreach(NPC y in x.npcAmb)
+                        {
+                            if (y.Nome == txtNomeNPC.Text)
+                                ok = false;
+                        }
+                        if(ok)
+                            x.npcAmb.Add(new NPC(txtNomeNPC.Text, ddlSaluteNPC.Text, int.Parse(ddlLivelloEsp.Text), txtDescNPC.Text, ddlAmbNPC.Text, txtFraseNPC.Text));
+                        else
+                        {
+                            lblErrNPC.Text = "Errore! Inserire nomi diversi per i diversi ambienti!";
+                            return;
+                        }
                     }
                 }
             }
@@ -1118,11 +1136,17 @@ namespace Editor
             pnNPC.Visible = false;
             pnInventarioNPC.Visible = false;
             pnPlayer.Visible = true;
+            btnCreaPlayer.Enabled = false;
         }
 
         protected void btnCreaPlayer_Click(object sender, EventArgs e)
         {
-            Session["player"] = new Player(txtNomePlayer.Text, txtDescPlayer.Text, 0);
+            Mappa mappa = (Mappa)Session["mappa"];
+            mappa.Player.Nome = txtNomePlayer.Text;
+            mappa.Player.Salute = "Buona";
+            mappa.Player.Exp = 0;
+            mappa.Player.AmbInit = ddlAmbInitPlayer.Text;
+            Session["mappa"] = mappa;
         }
 
         protected void btnCaricaImgAmb_Click(object sender, EventArgs e)
@@ -1132,6 +1156,8 @@ namespace Editor
                 imgAmb.Visible = true;
                 byte[] b = fuAmb.FileBytes;
                 imgAmb.ImageUrl = "data:image;base64," + Convert.ToBase64String(b);
+                fuAmb.Enabled = false;
+                btnAggiuntaSpecifiche.Enabled = true;
             }
         }
 
@@ -1158,6 +1184,83 @@ namespace Editor
         protected void btnCaricaImgEl5Inv_Click(object sender, EventArgs e)
         {
             CaricaImgInv("byteImgEl5", fuEl5Inv, imgEl5Inv);
+        }
+
+        protected void txtNomeAmb_Load(object sender, EventArgs e)
+        {
+            txtNomeAmb.Text = "";
+        }
+
+        protected void btnCaricaImgEl1InvNPC_Click(object sender, EventArgs e)
+        {
+            CaricaImgInv("byteImgEl1NPC", fuEl1InvNPC, imgEl1InvNPC);
+        }
+
+        protected void btnCaricaImgEl2InvNPC_Click(object sender, EventArgs e)
+        {
+            CaricaImgInv("byteImgEl2NPC", fuEl2InvNPC, imgEl2InvNPC);
+        }
+
+        protected void btnCaricaImgEl3InvNPC_Click(object sender, EventArgs e)
+        {
+            CaricaImgInv("byteImgEl3NPC", fuEl3InvNPC, imgEl3InvNPC);
+        }
+
+        protected void btnCaricaImgEl4InvNPC_Click(object sender, EventArgs e)
+        {
+            CaricaImgInv("byteImgEl4NPC", fuEl4InvNPC, imgEl4InvNPC);
+        }
+
+        protected void btnCaricaImgEl5InvNPC_Click(object sender, EventArgs e)
+        {
+            CaricaImgInv("byteImgEl5NPC", fuEl5InvNPC, imgEl5InvNPC);
+        }
+
+        protected void btnCaricaImgPlayer_Click(object sender, EventArgs e)
+        {
+            if (fuPlayer.HasFile)
+            {
+                imgSkin.Visible = true;
+                byte[] b = fuPlayer.FileBytes;
+                imgSkin.ImageUrl = "data:image;base64," + Convert.ToBase64String(b);
+                fuPlayer.Enabled = false;
+                btnCreaPlayer.Enabled = true;
+            }
+        }
+
+        protected void btnEsporta_Click(object sender, EventArgs e)
+        {
+            Mappa mappa = (Mappa)Session["mappa"];
+            int h = 0;
+            Ambiente[] a = new Ambiente[16];
+            for(int i = 0; i < mappa.ambienti.GetLength(0); i++)
+            {
+                for(int k = 0; k < mappa.ambienti.GetLength(1); k++)
+                {
+                    a[h] = mappa.ambienti[i, k];
+                }
+            }
+            MappaVett mappaVett = new MappaVett(a, mappa.Player);
+            using (FileStream saveStream =
+                new FileStream(Server.MapPath("~/App_Data/Exp.XML"),
+                                FileMode.Create,
+                                FileAccess.Write,
+                                FileShare.None))
+            {
+                // Grazie a Indent va anche a capo con i tag.
+                XmlWriterSettings xws = new XmlWriterSettings()
+                {
+                    Indent = true
+                };
+                using (XmlWriter xmlWriter =
+                        XmlWriter.Create(saveStream, xws))
+                {
+                    DataContractSerializer dcSerializer =
+                        new DataContractSerializer(typeof(Mappa));
+                    dcSerializer.WriteObject(xmlWriter, mappaVett);
+                }
+            }
+            btnEsporta.Enabled = false;
         }
     }
 }

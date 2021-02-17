@@ -240,15 +240,6 @@ namespace Editor
         protected global::System.Web.UI.WebControls.Panel pnAmbienteSpecifico;
 
         /// <summary>
-        /// Controllo ddlScegliAmbiente.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlScegliAmbiente;
-
-        /// <summary>
         /// Controllo txtNomeAmb.
         /// </summary>
         /// <remarks>
@@ -256,6 +247,15 @@ namespace Editor
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNomeAmb;
+
+        /// <summary>
+        /// Controllo ddlScegliAmbiente.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlScegliAmbiente;
 
         /// <summary>
         /// Controllo ddlDifficoltà.
@@ -537,51 +537,6 @@ namespace Editor
         protected global::System.Web.UI.WebControls.TextBox txtDescEl5Inv;
 
         /// <summary>
-        /// Controllo imgEl1Inv.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgEl1Inv;
-
-        /// <summary>
-        /// Controllo imgEl2Inv.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgEl2Inv;
-
-        /// <summary>
-        /// Controllo imgEl3Inv.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgEl3Inv;
-
-        /// <summary>
-        /// Controllo imgEl4Inv.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgEl4Inv;
-
-        /// <summary>
-        /// Controllo imgEl5Inv.
-        /// </summary>
-        /// <remarks>
-        /// Campo generato automaticamente.
-        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgEl5Inv;
-
-        /// <summary>
         /// Controllo fuEl1Inv.
         /// </summary>
         /// <remarks>
@@ -762,6 +717,51 @@ namespace Editor
         protected global::System.Web.UI.WebControls.Button btnCreaEl5Inv;
 
         /// <summary>
+        /// Controllo imgEl2Inv.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgEl2Inv;
+
+        /// <summary>
+        /// Controllo imgEl3Inv.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgEl3Inv;
+
+        /// <summary>
+        /// Controllo imgEl4Inv.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgEl4Inv;
+
+        /// <summary>
+        /// Controllo imgEl5Inv.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgEl5Inv;
+
+        /// <summary>
+        /// Controllo imgEl1Inv.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgEl1Inv;
+
+        /// <summary>
         /// Controllo pnNPC.
         /// </summary>
         /// <remarks>
@@ -816,6 +816,15 @@ namespace Editor
         protected global::System.Web.UI.WebControls.DropDownList ddlLivelloEsp;
 
         /// <summary>
+        /// Controllo txtFraseNPC.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFraseNPC;
+
+        /// <summary>
         /// Controllo btnCreaNPC.
         /// </summary>
         /// <remarks>
@@ -823,6 +832,15 @@ namespace Editor
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCreaNPC;
+
+        /// <summary>
+        /// Controllo lblErrNPC.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrNPC;
 
         /// <summary>
         /// Controllo pnInventarioNPC.
@@ -1032,6 +1050,96 @@ namespace Editor
         protected global::System.Web.UI.WebControls.TextBox txtDescEl5InvNPC;
 
         /// <summary>
+        /// Controllo fuEl1InvNPC.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuEl1InvNPC;
+
+        /// <summary>
+        /// Controllo fuEl2InvNPC.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuEl2InvNPC;
+
+        /// <summary>
+        /// Controllo fuEl3InvNPC.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuEl3InvNPC;
+
+        /// <summary>
+        /// Controllo fuEl4InvNPC.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuEl4InvNPC;
+
+        /// <summary>
+        /// Controllo fuEl5InvNPC.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuEl5InvNPC;
+
+        /// <summary>
+        /// Controllo btnCaricaImgEl1InvNPC.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCaricaImgEl1InvNPC;
+
+        /// <summary>
+        /// Controllo btnCaricaImgEl2InvNPC.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCaricaImgEl2InvNPC;
+
+        /// <summary>
+        /// Controllo btnCaricaImgEl3InvNPC.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCaricaImgEl3InvNPC;
+
+        /// <summary>
+        /// Controllo btnCaricaImgEl4InvNPC.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCaricaImgEl4InvNPC;
+
+        /// <summary>
+        /// Controllo btnCaricaImgEl5InvNPC.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCaricaImgEl5InvNPC;
+
+        /// <summary>
         /// Controllo ddlRacIndEl1InvNPC.
         /// </summary>
         /// <remarks>
@@ -1122,6 +1230,51 @@ namespace Editor
         protected global::System.Web.UI.WebControls.Button btnCreaEl5InvNPC;
 
         /// <summary>
+        /// Controllo imgEl1InvNPC.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgEl1InvNPC;
+
+        /// <summary>
+        /// Controllo imgEl2InvNPC.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgEl2InvNPC;
+
+        /// <summary>
+        /// Controllo imgEl3InvNPC.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgEl3InvNPC;
+
+        /// <summary>
+        /// Controllo imgEl4InvNPC.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgEl4InvNPC;
+
+        /// <summary>
+        /// Controllo imgEl5InvNPC.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgEl5InvNPC;
+
+        /// <summary>
         /// Controllo pnPlayer.
         /// </summary>
         /// <remarks>
@@ -1140,13 +1293,31 @@ namespace Editor
         protected global::System.Web.UI.WebControls.TextBox txtNomePlayer;
 
         /// <summary>
-        /// Controllo txtDescPlayer.
+        /// Controllo ddlAmbInitPlayer.
         /// </summary>
         /// <remarks>
         /// Campo generato automaticamente.
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDescPlayer;
+        protected global::System.Web.UI.WebControls.DropDownList ddlAmbInitPlayer;
+
+        /// <summary>
+        /// Controllo fuPlayer.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuPlayer;
+
+        /// <summary>
+        /// Controllo btnCaricaImgPlayer.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCaricaImgPlayer;
 
         /// <summary>
         /// Controllo btnCreaPlayer.
@@ -1156,5 +1327,23 @@ namespace Editor
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnCreaPlayer;
+
+        /// <summary>
+        /// Controllo imgSkin.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgSkin;
+
+        /// <summary>
+        /// Controllo btnEsporta.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnEsporta;
     }
 }
