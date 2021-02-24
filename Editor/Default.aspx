@@ -76,6 +76,9 @@
                             <asp:ListItem>10</asp:ListItem>
                         </asp:DropDownList>
                         <br />
+                        <br />
+                        <asp:Label ID="Label16" runat="server" Text="Descrizione ambiente"></asp:Label>
+                        <br />
                         <asp:TextBox ID="txtDescrizioneAmb" runat="server" Height="157px" TextMode="MultiLine" Width="259px"></asp:TextBox>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
                         <asp:Image ID="imgAmb" runat="server" BorderStyle="None" style="max-height:150px;max-width:250px;height:auto;width:auto;"/>
@@ -131,15 +134,15 @@
                         <asp:TextBox ID="txtNomeEl5Inv" runat="server" Visible="False" style="left:1280px; width:242px; position:absolute;"></asp:TextBox>
                         <br />
                         <br />
-                        <asp:Label ID="lblDescrizione1" runat="server" Text="Descrizione" Visible="False"></asp:Label>
+                        <asp:Label ID="lblDescrizione1" runat="server" Text="Azione" Visible="False"></asp:Label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="lblDescrizione2" runat="server" Text="Descrizione" Visible="False" style="left:320px; position:absolute;"></asp:Label>
+                        <asp:Label ID="lblDescrizione2" runat="server" Text="Azione" Visible="False" style="left:320px; position:absolute;"></asp:Label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="lblDescrizione3" runat="server" Text="Descrizione" Visible="False" style="left:640px; position:absolute;"></asp:Label>
+                        <asp:Label ID="lblDescrizione3" runat="server" Text="Azione" Visible="False" style="left:640px; position:absolute;"></asp:Label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="lblDescrizione4" runat="server" Text="Descrizione" Visible="False" style="left:960px; position:absolute;"></asp:Label>
+                        <asp:Label ID="lblDescrizione4" runat="server" Text="Azione" Visible="False" style="left:960px; position:absolute;"></asp:Label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="lblDescrizione5" runat="server" Text="Descrizione" Visible="False" style="left:1280px; position:absolute;"></asp:Label>
+                        <asp:Label ID="lblDescrizione5" runat="server" Text="Azione" Visible="False" style="left:1280px; position:absolute;"></asp:Label>
                         <br />
                         <asp:TextBox ID="txtDescEl1Inv" runat="server" Height="167px" TextMode="MultiLine" Visible="False" Width="188px"></asp:TextBox>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -210,15 +213,15 @@
                         </asp:DropDownList>
                         <br />
                         <br />
-                        <asp:Button ID="btnCreaEl1Inv" runat="server" OnClick="btnCreaEl1Inv_Click" style="left:10px; width:242px; position:absolute;" Text="Crea elemento" Visible="False" />
+                        <asp:Button ID="btnCreaEl1Inv" runat="server" OnClick="btnCreaEl1Inv_Click" style="left:10px; width:242px; position:absolute;" Text="Crea elemento" Visible="False" Enabled="False" />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnCreaEl2Inv" runat="server" OnClick="btnCreaEl2Inv_Click" style="left:320px; width:242px; position:absolute;" Text="Crea elemento" Visible="False" />
+                        <asp:Button ID="btnCreaEl2Inv" runat="server" OnClick="btnCreaEl2Inv_Click" style="left:320px; width:242px; position:absolute;" Text="Crea elemento" Visible="False" Enabled="False" />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnCreaEl3Inv" runat="server" OnClick="btnCreaEl3Inv_Click" style="left:640px; width:242px; position:absolute;" Text="Crea elemento" Visible="False" />
+                        <asp:Button ID="btnCreaEl3Inv" runat="server" OnClick="btnCreaEl3Inv_Click" style="left:640px; width:242px; position:absolute;" Text="Crea elemento" Visible="False" Enabled="False" />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnCreaEl4Inv" runat="server" OnClick="btnCreaEl4Inv_Click" style="left:960px; width:242px; position:absolute;" Text="Crea elemento" Visible="False" />
+                        <asp:Button ID="btnCreaEl4Inv" runat="server" OnClick="btnCreaEl4Inv_Click" style="left:960px; width:242px; position:absolute;" Text="Crea elemento" Visible="False" Enabled="False" />
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnCreaEl5Inv" runat="server" OnClick="btnCreaEl5Inv_Click" style="left:1280px; width:242px; position:absolute;" Text="Crea elemento" Visible="False" />
+                        <asp:Button ID="btnCreaEl5Inv" runat="server" OnClick="btnCreaEl5Inv_Click" style="left:1280px; width:242px; position:absolute;" Text="Crea elemento" Visible="False" Enabled="False" />
                         <br />
                         <br />
                         <br />
@@ -316,15 +319,15 @@
                         <asp:TextBox ID="txtNomeEl5InvNPC" runat="server" Visible="False" style="left:1280px; width:242px; position:absolute;"></asp:TextBox>
                         <br />
                         <br />
-                        <asp:Label ID="lblDescrizione6" runat="server" Text="Descrizione" Visible="False" style="left:10px; width:242px; position:absolute;"></asp:Label>
+                        <asp:Label ID="lblDescrizione6" runat="server" Text="Azione" Visible="False" style="left:10px; width:242px; position:absolute;"></asp:Label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="lblDescrizione7" runat="server" Text="Descrizione" Visible="False" style="left:320px; width:242px; position:absolute;"></asp:Label>
+                        <asp:Label ID="lblDescrizione7" runat="server" Text="Azione" Visible="False" style="left:320px; width:242px; position:absolute;"></asp:Label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="lblDescrizione8" runat="server" Text="Descrizione" Visible="False" style="left:640px; width:242px; position:absolute;"></asp:Label>
+                        <asp:Label ID="lblDescrizione8" runat="server" Text="Azione" Visible="False" style="left:640px; width:242px; position:absolute;"></asp:Label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="lblDescrizione9" runat="server" Text="Descrizione" Visible="False" style="left:960px; width:242px; position:absolute;"></asp:Label>
+                        <asp:Label ID="lblDescrizione9" runat="server" Text="Azione" Visible="False" style="left:960px; width:242px; position:absolute;"></asp:Label>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Label ID="lblDescrizione10" runat="server" Text="Descrizione" Visible="False" style="left:1280px; width:242px; position:absolute;"></asp:Label>
+                        <asp:Label ID="lblDescrizione10" runat="server" Text="Azione" Visible="False" style="left:1280px; width:242px; position:absolute;"></asp:Label>
                         <br />
                         <asp:TextBox ID="txtDescEl1InvNPC" runat="server" Height="167px" TextMode="MultiLine" Visible="False" Width="202px"></asp:TextBox>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -357,39 +360,39 @@
                         <br />
                         <asp:DropDownList ID="ddlRacIndEl1InvNPC" runat="server" style="left:10px; width:242px; position:absolute;" Visible="False">
                             <asp:ListItem>Indossabile</asp:ListItem>
-                            <asp:ListItem>Arma</asp:ListItem>
+                            <asp:ListItem>Non indossabile</asp:ListItem>
                         </asp:DropDownList>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:DropDownList ID="ddlRacIndEl2InvNPC" runat="server" style="left:320px; width:242px; position:absolute;" Visible="False">
                             <asp:ListItem>Indossabile</asp:ListItem>
-                            <asp:ListItem>Arma</asp:ListItem>
+                            <asp:ListItem>Non indossabile</asp:ListItem>
                         </asp:DropDownList>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:DropDownList ID="ddlRacIndEl3InvNPC" runat="server" style="left:640px; width:242px; position:absolute;" Visible="False">
                             <asp:ListItem>Indossabile</asp:ListItem>
-                            <asp:ListItem>Arma</asp:ListItem>
+                            <asp:ListItem>Non indossabile</asp:ListItem>
                         </asp:DropDownList>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:DropDownList ID="ddlRacIndEl4InvNPC" runat="server" style="left:960px; width:242px; position:absolute;" Visible="False">
+                        <asp:DropDownList ID="ddlRacIndEl4InvNPC" runat="server" style="left:960px; width:242px; position:absolute; top: 2425px;" Visible="False">
                             <asp:ListItem>Indossabile</asp:ListItem>
-                            <asp:ListItem>Arma</asp:ListItem>
+                            <asp:ListItem>Non indossabile</asp:ListItem>
                         </asp:DropDownList>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <asp:DropDownList ID="ddlRacIndEl5InvNPC" runat="server" style="left:1280px; width:242px; position:absolute;" Visible="False">
                             <asp:ListItem>Indossabile</asp:ListItem>
-                            <asp:ListItem>Arma</asp:ListItem>
+                            <asp:ListItem>Non indossabile</asp:ListItem>
                         </asp:DropDownList>
                         <br />
                         <br />
-                        <asp:Button ID="btnCreaEl1InvNPC" runat="server" OnClick="btnCreaEl1InvNPC_Click" Text="Crea elemento" Visible="False" style="left:10px; width:242px; position:absolute;"/>
+                        <asp:Button ID="btnCreaEl1InvNPC" runat="server" OnClick="btnCreaEl1InvNPC_Click" Text="Crea elemento" Visible="False" style="left:10px; width:242px; position:absolute;" Enabled="False"/>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnCreaEl2InvNPC" runat="server" Text="Crea elemento" Visible="False" OnClick="btnCreaEl2InvNPC_Click" style="left:320px; width:242px; position:absolute;"/>
+                        <asp:Button ID="btnCreaEl2InvNPC" runat="server" Text="Crea elemento" Visible="False" OnClick="btnCreaEl2InvNPC_Click" style="left:320px; width:242px; position:absolute; top: 2479px;" Enabled="False"/>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnCreaEl3InvNPC" runat="server" Text="Crea elemento" Visible="False" OnClick="btnCreaEl3InvNPC_Click" style="left:640px; width:242px; position:absolute;"/>
+                        <asp:Button ID="btnCreaEl3InvNPC" runat="server" Text="Crea elemento" Visible="False" OnClick="btnCreaEl3InvNPC_Click" style="left:640px; width:242px; position:absolute;" Enabled="False"/>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnCreaEl4InvNPC" runat="server" Text="Crea elemento" Visible="False" OnClick="btnCreaEl4InvNPC_Click" style="left:960px; width:242px; position:absolute;"/>
+                        <asp:Button ID="btnCreaEl4InvNPC" runat="server" Text="Crea elemento" Visible="False" OnClick="btnCreaEl4InvNPC_Click" style="left:960px; width:242px; position:absolute;" Enabled="False"/>
                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="btnCreaEl5InvNPC" runat="server" Text="Crea elemento" Visible="False" OnClick="btnCreaEl5InvNPC_Click" style="left:1280px; width:242px; position:absolute;"/>
+                        <asp:Button ID="btnCreaEl5InvNPC" runat="server" Text="Crea elemento" Visible="False" OnClick="btnCreaEl5InvNPC_Click" style="left:1280px; width:242px; position:absolute;" Enabled="False"/>
                         <br />
                         <br />
                         <asp:Image ID="imgEl1InvNPC" runat="server" style="max-height:150px;max-width:250px;height:auto;width:auto;left:10px; position:absolute;"/>

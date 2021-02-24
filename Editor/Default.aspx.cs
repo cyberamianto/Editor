@@ -11,6 +11,7 @@ using System.Xml;
 
 namespace Editor
 {
+    //Giammarco Perugini 5F
     public partial class Default : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
@@ -452,6 +453,9 @@ namespace Editor
                 pnInventarioNPC.Visible = false;
                 pnNPC.Enabled = true;
                 btnPlayer.Enabled = true;
+                txtNomeNPC.Text = "";
+                txtDescNPC.Text = "";
+                txtFraseNPC.Text = "";
                 #endregion
                 Session["counterBtn"] = 1;
             }
@@ -515,7 +519,10 @@ namespace Editor
                                             y.Inv.Add(new Entity(txtNomeMetodo.Text, txtDescMetodo.Text, false, true, (byte[])Session[byteImgMetodo]));
                                             break;
                                         case "Arma":
-                                            y.Inv.Add(new Arma(txtNomeMetodo.Text, txtDescMetodo.Text, 7, 5, (byte[])Session[byteImgMetodo]));
+                                            //y.Inv.Add(new Arma(txtNomeMetodo.Text, txtDescMetodo.Text, 7, 5, (byte[])Session[byteImgMetodo]));
+                                            break;
+                                        case "Non indossabile":
+                                            y.Inv.Add(new Entity(txtNomeMetodo.Text, txtDescMetodo.Text, false, false, (byte[])Session[byteImgMetodo]));
                                             break;
                                     }
                                 }
@@ -572,7 +579,7 @@ namespace Editor
                     txtDescEl1Inv.Visible = true;
                     ddlRacIndEl1Inv.Visible = true;
                     btnCreaEl1Inv.Visible = true;
-                    btnCreaEl1Inv.Enabled = true;
+                    //btnCreaEl1Inv.Enabled = true;
                     btnCaricaImgEl1Inv.Enabled = true;
                     btnCaricaImgEl1Inv.Visible = true;
                     fuEl1Inv.Enabled = true;
@@ -589,7 +596,7 @@ namespace Editor
                     txtDescEl1Inv.Visible = true;
                     ddlRacIndEl1Inv.Visible = true;
                     btnCreaEl1Inv.Visible = true;
-                    btnCreaEl1Inv.Enabled = true;
+                    //btnCreaEl1Inv.Enabled = true;
                     btnCaricaImgEl1Inv.Enabled = true;
                     btnCaricaImgEl1Inv.Visible = true;
                     fuEl1Inv.Enabled = true;
@@ -602,7 +609,7 @@ namespace Editor
                     txtDescEl2Inv.Visible = true;
                     ddlRacIndEl2Inv.Visible = true;
                     btnCreaEl2Inv.Visible = true;
-                    btnCreaEl2Inv.Enabled = true;
+                    //btnCreaEl2Inv.Enabled = true;
                     btnCaricaImgEl2Inv.Enabled = true;
                     btnCaricaImgEl2Inv.Visible = true;
                     fuEl2Inv.Enabled = true;
@@ -619,7 +626,7 @@ namespace Editor
                     txtDescEl1Inv.Visible = true;
                     ddlRacIndEl1Inv.Visible = true;
                     btnCreaEl1Inv.Visible = true;
-                    btnCreaEl1Inv.Enabled = true;
+                    //btnCreaEl1Inv.Enabled = true;
                     btnCaricaImgEl1Inv.Enabled = true;
                     btnCaricaImgEl1Inv.Visible = true;
                     fuEl1Inv.Enabled = true;
@@ -632,7 +639,7 @@ namespace Editor
                     txtDescEl2Inv.Visible = true;
                     ddlRacIndEl2Inv.Visible = true;
                     btnCreaEl2Inv.Visible = true;
-                    btnCreaEl2Inv.Enabled = true;
+                    //btnCreaEl2Inv.Enabled = true;
                     btnCaricaImgEl2Inv.Enabled = true;
                     btnCaricaImgEl2Inv.Visible = true;
                     fuEl2Inv.Enabled = true;
@@ -645,7 +652,7 @@ namespace Editor
                     txtDescEl3Inv.Visible = true;
                     ddlRacIndEl3Inv.Visible = true;
                     btnCreaEl3Inv.Visible = true;
-                    btnCreaEl3Inv.Enabled = true;
+                    //btnCreaEl3Inv.Enabled = true;
                     btnCaricaImgEl3Inv.Enabled = true;
                     btnCaricaImgEl3Inv.Visible = true;
                     fuEl3Inv.Enabled = true;
@@ -663,7 +670,7 @@ namespace Editor
                     txtDescEl1Inv.Visible = true;
                     ddlRacIndEl1Inv.Visible = true;
                     btnCreaEl1Inv.Visible = true;
-                    btnCreaEl1Inv.Enabled = true;
+                    //btnCreaEl1Inv.Enabled = true;
                     btnCaricaImgEl1Inv.Enabled = true;
                     btnCaricaImgEl1Inv.Visible = true;
                     fuEl1Inv.Enabled = true;
@@ -676,7 +683,7 @@ namespace Editor
                     txtDescEl2Inv.Visible = true;
                     ddlRacIndEl2Inv.Visible = true;
                     btnCreaEl2Inv.Visible = true;
-                    btnCreaEl2Inv.Enabled = true;
+                    //btnCreaEl2Inv.Enabled = true;
                     btnCaricaImgEl2Inv.Enabled = true;
                     btnCaricaImgEl2Inv.Visible = true;
                     fuEl2Inv.Enabled = true;
@@ -689,7 +696,7 @@ namespace Editor
                     txtDescEl3Inv.Visible = true;
                     ddlRacIndEl3Inv.Visible = true;
                     btnCreaEl3Inv.Visible = true;
-                    btnCreaEl3Inv.Enabled = true;
+                    //btnCreaEl3Inv.Enabled = true;
                     btnCaricaImgEl3Inv.Enabled = true;
                     btnCaricaImgEl3Inv.Visible = true;
                     fuEl3Inv.Enabled = true;
@@ -702,7 +709,7 @@ namespace Editor
                     txtDescEl4Inv.Visible = true;
                     ddlRacIndEl4Inv.Visible = true;
                     btnCreaEl4Inv.Visible = true;
-                    btnCreaEl4Inv.Enabled = true;
+                    //btnCreaEl4Inv.Enabled = true;
                     btnCaricaImgEl4Inv.Enabled = true;
                     btnCaricaImgEl4Inv.Visible = true;
                     fuEl4Inv.Enabled = true;
@@ -719,7 +726,7 @@ namespace Editor
                     txtDescEl1Inv.Visible = true;
                     ddlRacIndEl1Inv.Visible = true;
                     btnCreaEl1Inv.Visible = true;
-                    btnCreaEl1Inv.Enabled = true;
+                    //btnCreaEl1Inv.Enabled = true;
                     btnCaricaImgEl1Inv.Enabled = true;
                     btnCaricaImgEl1Inv.Visible = true;
                     fuEl1Inv.Enabled = true;
@@ -732,7 +739,7 @@ namespace Editor
                     txtDescEl2Inv.Visible = true;
                     ddlRacIndEl2Inv.Visible = true;
                     btnCreaEl2Inv.Visible = true;
-                    btnCreaEl2Inv.Enabled = true;
+                    //btnCreaEl2Inv.Enabled = true;
                     btnCaricaImgEl2Inv.Enabled = true;
                     btnCaricaImgEl2Inv.Visible = true;
                     fuEl2Inv.Enabled = true;
@@ -745,7 +752,7 @@ namespace Editor
                     txtDescEl3Inv.Visible = true;
                     ddlRacIndEl3Inv.Visible = true;
                     btnCreaEl3Inv.Visible = true;
-                    btnCreaEl3Inv.Enabled = true;
+                    //btnCreaEl3Inv.Enabled = true;
                     btnCaricaImgEl3Inv.Enabled = true;
                     btnCaricaImgEl3Inv.Visible = true;
                     fuEl3Inv.Enabled = true;
@@ -758,7 +765,7 @@ namespace Editor
                     txtDescEl4Inv.Visible = true;
                     ddlRacIndEl4Inv.Visible = true;
                     btnCreaEl4Inv.Visible = true;
-                    btnCreaEl4Inv.Enabled = true;
+                    //btnCreaEl4Inv.Enabled = true;
                     txtNomeEl5Inv.Visible = true;
                     btnCaricaImgEl4Inv.Enabled = true;
                     btnCaricaImgEl4Inv.Visible = true;
@@ -772,7 +779,7 @@ namespace Editor
                     txtDescEl5Inv.Visible = true;
                     ddlRacIndEl5Inv.Visible = true;
                     btnCreaEl5Inv.Visible = true;
-                    btnCreaEl5Inv.Enabled = true;
+                    //btnCreaEl5Inv.Enabled = true;
                     btnCaricaImgEl5Inv.Enabled = true;
                     btnCaricaImgEl5Inv.Visible = true;
                     fuEl5Inv.Enabled = true;
@@ -1034,7 +1041,7 @@ namespace Editor
                     txtDescEl1InvNPC.Visible = true;
                     ddlRacIndEl1InvNPC.Visible = true;
                     btnCreaEl1InvNPC.Visible = true;
-                    btnCreaEl1InvNPC.Enabled = true;
+                    //btnCreaEl1InvNPC.Enabled = true;
                     btnCaricaImgEl1InvNPC.Enabled = true;
                     btnCaricaImgEl1InvNPC.Visible = true;
                     fuEl1InvNPC.Enabled = true;
@@ -1051,7 +1058,7 @@ namespace Editor
                     txtDescEl1InvNPC.Visible = true;
                     ddlRacIndEl1InvNPC.Visible = true;
                     btnCreaEl1InvNPC.Visible = true;
-                    btnCreaEl1InvNPC.Enabled = true;
+                    //btnCreaEl1InvNPC.Enabled = true;
                     btnCaricaImgEl1InvNPC.Enabled = true;
                     btnCaricaImgEl1InvNPC.Visible = true;
                     fuEl1InvNPC.Enabled = true;
@@ -1064,7 +1071,7 @@ namespace Editor
                     txtDescEl2InvNPC.Visible = true;
                     ddlRacIndEl2InvNPC.Visible = true;
                     btnCreaEl2InvNPC.Visible = true;
-                    btnCreaEl2InvNPC.Enabled = true;
+                    //btnCreaEl2InvNPC.Enabled = true;
                     btnCaricaImgEl2InvNPC.Enabled = true;
                     btnCaricaImgEl2InvNPC.Visible = true;
                     fuEl2InvNPC.Enabled = true;
@@ -1081,7 +1088,7 @@ namespace Editor
                     txtDescEl1InvNPC.Visible = true;
                     ddlRacIndEl1InvNPC.Visible = true;
                     btnCreaEl1InvNPC.Visible = true;
-                    btnCreaEl1InvNPC.Enabled = true;
+                    //btnCreaEl1InvNPC.Enabled = true;
                     btnCaricaImgEl1InvNPC.Enabled = true;
                     btnCaricaImgEl1InvNPC.Visible = true;
                     fuEl1InvNPC.Enabled = true;
@@ -1094,7 +1101,7 @@ namespace Editor
                     txtDescEl2InvNPC.Visible = true;
                     ddlRacIndEl2InvNPC.Visible = true;
                     btnCreaEl2InvNPC.Visible = true;
-                    btnCreaEl2InvNPC.Enabled = true;
+                    //btnCreaEl2InvNPC.Enabled = true;
                     btnCaricaImgEl2InvNPC.Enabled = true;
                     btnCaricaImgEl2InvNPC.Visible = true;
                     fuEl2InvNPC.Enabled = true;
@@ -1107,7 +1114,7 @@ namespace Editor
                     txtDescEl3InvNPC.Visible = true;
                     ddlRacIndEl3InvNPC.Visible = true;
                     btnCreaEl3InvNPC.Visible = true;
-                    btnCreaEl3InvNPC.Enabled = true;
+                    //btnCreaEl3InvNPC.Enabled = true;
                     btnCaricaImgEl3InvNPC.Enabled = true;
                     btnCaricaImgEl3InvNPC.Visible = true;
                     fuEl3InvNPC.Enabled = true;
@@ -1124,7 +1131,7 @@ namespace Editor
                     txtDescEl1InvNPC.Visible = true;
                     ddlRacIndEl1InvNPC.Visible = true;
                     btnCreaEl1InvNPC.Visible = true;
-                    btnCreaEl1InvNPC.Enabled = true;
+                    //btnCreaEl1InvNPC.Enabled = true;
                     btnCaricaImgEl1InvNPC.Enabled = true;
                     btnCaricaImgEl1InvNPC.Visible = true;
                     fuEl1InvNPC.Enabled = true;
@@ -1137,7 +1144,7 @@ namespace Editor
                     txtDescEl2InvNPC.Visible = true;
                     ddlRacIndEl2InvNPC.Visible = true;
                     btnCreaEl2InvNPC.Visible = true;
-                    btnCreaEl2InvNPC.Enabled = true;
+                    //btnCreaEl2InvNPC.Enabled = true;
                     btnCaricaImgEl2InvNPC.Enabled = true;
                     btnCaricaImgEl2InvNPC.Visible = true;
                     fuEl2InvNPC.Enabled = true;
@@ -1150,7 +1157,7 @@ namespace Editor
                     txtDescEl3InvNPC.Visible = true;
                     ddlRacIndEl3InvNPC.Visible = true;
                     btnCreaEl3InvNPC.Visible = true;
-                    btnCreaEl3InvNPC.Enabled = true;
+                    //btnCreaEl3InvNPC.Enabled = true;
                     btnCaricaImgEl3InvNPC.Enabled = true;
                     btnCaricaImgEl3InvNPC.Visible = true;
                     fuEl3InvNPC.Enabled = true;
@@ -1163,7 +1170,7 @@ namespace Editor
                     txtDescEl4InvNPC.Visible = true;
                     ddlRacIndEl4InvNPC.Visible = true;
                     btnCreaEl4InvNPC.Visible = true;
-                    btnCreaEl4InvNPC.Enabled = true;
+                    //btnCreaEl4InvNPC.Enabled = true;
                     btnCaricaImgEl4InvNPC.Enabled = true;
                     btnCaricaImgEl4InvNPC.Visible = true;
                     fuEl4InvNPC.Enabled = true;
@@ -1180,7 +1187,7 @@ namespace Editor
                     txtDescEl1InvNPC.Visible = true;
                     ddlRacIndEl1InvNPC.Visible = true;
                     btnCreaEl1InvNPC.Visible = true;
-                    btnCreaEl1InvNPC.Enabled = true;
+                    //btnCreaEl1InvNPC.Enabled = true;
                     btnCaricaImgEl1InvNPC.Enabled = true;
                     btnCaricaImgEl1InvNPC.Visible = true;
                     fuEl1InvNPC.Enabled = true;
@@ -1193,7 +1200,7 @@ namespace Editor
                     txtDescEl2InvNPC.Visible = true;
                     ddlRacIndEl2InvNPC.Visible = true;
                     btnCreaEl2InvNPC.Visible = true;
-                    btnCreaEl2InvNPC.Enabled = true;
+                    //btnCreaEl2InvNPC.Enabled = true;
                     btnCaricaImgEl2InvNPC.Enabled = true;
                     btnCaricaImgEl2InvNPC.Visible = true;
                     fuEl2InvNPC.Enabled = true;
@@ -1206,7 +1213,7 @@ namespace Editor
                     txtDescEl3InvNPC.Visible = true;
                     ddlRacIndEl3InvNPC.Visible = true;
                     btnCreaEl3InvNPC.Visible = true;
-                    btnCreaEl3InvNPC.Enabled = true;
+                    //btnCreaEl3InvNPC.Enabled = true;
                     btnCaricaImgEl3InvNPC.Enabled = true;
                     btnCaricaImgEl3InvNPC.Visible = true;
                     fuEl3InvNPC.Enabled = true;
@@ -1219,7 +1226,7 @@ namespace Editor
                     txtDescEl4InvNPC.Visible = true;
                     ddlRacIndEl4InvNPC.Visible = true;
                     btnCreaEl4InvNPC.Visible = true;
-                    btnCreaEl4InvNPC.Enabled = true;
+                    //btnCreaEl4InvNPC.Enabled = true;
                     txtNomeEl5InvNPC.Visible = true;
                     btnCaricaImgEl4InvNPC.Enabled = true;
                     btnCaricaImgEl4InvNPC.Visible = true;
@@ -1233,7 +1240,7 @@ namespace Editor
                     txtDescEl5InvNPC.Visible = true;
                     ddlRacIndEl5InvNPC.Visible = true;
                     btnCreaEl5InvNPC.Visible = true;
-                    btnCreaEl5InvNPC.Enabled = true;
+                    //btnCreaEl5InvNPC.Enabled = true;
                     btnCaricaImgEl5InvNPC.Enabled = true;
                     btnCaricaImgEl5InvNPC.Visible = true;
                     fuEl5InvNPC.Enabled = true;
@@ -1323,26 +1330,36 @@ namespace Editor
         protected void btnCaricaImgEl1Inv_Click(object sender, EventArgs e)
         {
             CaricaImgInv("byteImgEl1", fuEl1Inv, imgEl1Inv);
+            if (imgEl1Inv.ImageUrl != "")
+                btnCreaEl1Inv.Enabled = true;
         }
 
         protected void btnCaricaImgEl2Inv_Click(object sender, EventArgs e)
         {
             CaricaImgInv("byteImgEl2", fuEl2Inv, imgEl2Inv);
+            if (imgEl2Inv.ImageUrl != "")
+                btnCreaEl2Inv.Enabled = true;
         }
 
         protected void btnCaricaImgEl3Inv_Click(object sender, EventArgs e)
         {
             CaricaImgInv("byteImgEl3", fuEl3Inv, imgEl3Inv);
+            if (imgEl3Inv.ImageUrl != "")
+                btnCreaEl3Inv.Enabled = true;
         }
 
         protected void btnCaricaImgEl4Inv_Click(object sender, EventArgs e)
         {
             CaricaImgInv("byteImgEl4", fuEl4Inv, imgEl4Inv);
+            if (imgEl4Inv.ImageUrl != "")
+                btnCreaEl4Inv.Enabled = true;
         }
 
         protected void btnCaricaImgEl5Inv_Click(object sender, EventArgs e)
         {
             CaricaImgInv("byteImgEl5", fuEl5Inv, imgEl5Inv);
+            if (imgEl5Inv.ImageUrl != "")
+                btnCreaEl5Inv.Enabled = true;
         }
 
         protected void txtNomeAmb_Load(object sender, EventArgs e)
@@ -1353,26 +1370,36 @@ namespace Editor
         protected void btnCaricaImgEl1InvNPC_Click(object sender, EventArgs e)
         {
             CaricaImgInv("byteImgEl1NPC", fuEl1InvNPC, imgEl1InvNPC);
+            if (imgEl1InvNPC.ImageUrl != "")
+                btnCreaEl1InvNPC.Enabled = true;
         }
 
         protected void btnCaricaImgEl2InvNPC_Click(object sender, EventArgs e)
         {
             CaricaImgInv("byteImgEl2NPC", fuEl2InvNPC, imgEl2InvNPC);
+            if (imgEl2InvNPC.ImageUrl != "")
+                btnCreaEl2InvNPC.Enabled = true;
         }
 
         protected void btnCaricaImgEl3InvNPC_Click(object sender, EventArgs e)
         {
             CaricaImgInv("byteImgEl3NPC", fuEl3InvNPC, imgEl3InvNPC);
+            if (imgEl3InvNPC.ImageUrl != "")
+                btnCreaEl3InvNPC.Enabled = true;
         }
 
         protected void btnCaricaImgEl4InvNPC_Click(object sender, EventArgs e)
         {
             CaricaImgInv("byteImgEl4NPC", fuEl4InvNPC, imgEl4InvNPC);
+            if (imgEl4InvNPC.ImageUrl != "")
+                btnCreaEl4InvNPC.Enabled = true;
         }
 
         protected void btnCaricaImgEl5InvNPC_Click(object sender, EventArgs e)
         {
             CaricaImgInv("byteImgEl5NPC", fuEl5InvNPC, imgEl5InvNPC);
+            if (imgEl5InvNPC.ImageUrl != "")
+                btnCreaEl5InvNPC.Enabled = true;
         }
 
         protected void btnCaricaImgPlayer_Click(object sender, EventArgs e)
