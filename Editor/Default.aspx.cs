@@ -15,6 +15,7 @@ namespace Editor
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //this.Page.Form.Enctype = "multipart/form-data";
             #region getione_interfaccia
             if (!IsPostBack)
             {
@@ -271,6 +272,10 @@ namespace Editor
                 fuEl1Inv.Enabled = false;
                 fuEl1Inv.Visible = false;
                 imgEl1Inv.Visible = false;
+                lblSelezionaSkin1.Visible = false;
+                txtNomeEl1Inv.Text = "";
+                txtDescEl1Inv.Text = "";
+                imgEl1Inv.ImageUrl = "";
                 lblNome2.Visible = false;
                 lblDescrizione2.Visible = false;
                 txtNomeEl2Inv.Visible = false;
@@ -283,6 +288,10 @@ namespace Editor
                 fuEl2Inv.Enabled = false;
                 fuEl2Inv.Visible = false;
                 imgEl2Inv.Visible = false;
+                lblSelezionaSkin2.Visible = false;
+                txtNomeEl2Inv.Text = "";
+                txtDescEl2Inv.Text = "";
+                imgEl2Inv.ImageUrl = "";
                 lblNome3.Visible = false;
                 lblDescrizione3.Visible = false;
                 txtNomeEl3Inv.Visible = false;
@@ -295,6 +304,10 @@ namespace Editor
                 fuEl3Inv.Enabled = false;
                 fuEl3Inv.Visible = false;
                 imgEl3Inv.Visible = false;
+                lblSelezionaSkin3.Visible = false;
+                txtNomeEl3Inv.Text = "";
+                txtDescEl3Inv.Text = "";
+                imgEl3Inv.ImageUrl = "";
                 lblNome4.Visible = false;
                 lblDescrizione4.Visible = false;
                 txtNomeEl4Inv.Visible = false;
@@ -308,6 +321,10 @@ namespace Editor
                 fuEl4Inv.Enabled = false;
                 fuEl4Inv.Visible = false;
                 imgEl4Inv.Visible = false;
+                lblSelezionaSkin4.Visible = false;
+                txtNomeEl4Inv.Text = "";
+                txtDescEl4Inv.Text = "";
+                imgEl4Inv.ImageUrl = "";
                 lblNome5.Visible = false;
                 lblDescrizione5.Visible = false;
                 txtNomeEl5Inv.Visible = false;
@@ -320,6 +337,10 @@ namespace Editor
                 fuEl5Inv.Enabled = false;
                 fuEl5Inv.Visible = false;
                 imgEl5Inv.Visible = false;
+                lblSelezionaSkin5.Visible = false;
+                txtNomeEl5Inv.Text = "";
+                txtDescEl5Inv.Text = "";
+                imgEl5Inv.ImageUrl = "";
                 ddlNumElementi.Enabled = true;
                 btnNumero.Enabled = true;
                 ddlInvAmb.Enabled = true;
@@ -358,6 +379,10 @@ namespace Editor
                 fuEl1InvNPC.Enabled = false;
                 fuEl1InvNPC.Visible = false;
                 imgEl1InvNPC.Visible = false;
+                lblSelezionaSkinNPC1.Visible = false;
+                txtNomeEl1InvNPC.Text = "";
+                txtDescEl1InvNPC.Text = "";
+                imgEl1InvNPC.ImageUrl = "";
                 lblNome7.Visible = false;
                 lblDescrizione7.Visible = false;
                 txtNomeEl2InvNPC.Visible = false;
@@ -370,6 +395,10 @@ namespace Editor
                 fuEl2InvNPC.Enabled = false;
                 fuEl2InvNPC.Visible = false;
                 imgEl2InvNPC.Visible = false;
+                lblSelezionaSkinNPC2.Visible = false;
+                txtNomeEl2InvNPC.Text = "";
+                txtDescEl2InvNPC.Text = "";
+                imgEl2InvNPC.ImageUrl = "";
                 lblNome8.Visible = false;
                 lblDescrizione8.Visible = false;
                 txtNomeEl3InvNPC.Visible = false;
@@ -382,6 +411,10 @@ namespace Editor
                 fuEl3InvNPC.Enabled = false;
                 fuEl3InvNPC.Visible = false;
                 imgEl3InvNPC.Visible = false;
+                lblSelezionaSkinNPC3.Visible = false;
+                txtNomeEl3InvNPC.Text = "";
+                txtDescEl3InvNPC.Text = "";
+                imgEl3InvNPC.ImageUrl = "";
                 lblNome9.Visible = false;
                 lblDescrizione9.Visible = false;
                 txtNomeEl4InvNPC.Visible = false;
@@ -395,6 +428,10 @@ namespace Editor
                 fuEl4InvNPC.Enabled = false;
                 fuEl4InvNPC.Visible = false;
                 imgEl4InvNPC.Visible = false;
+                txtNomeEl4InvNPC.Text = "";
+                txtDescEl4InvNPC.Text = "";
+                imgEl4InvNPC.ImageUrl = "";
+                lblSelezionaSkinNPC4.Visible = false;
                 lblNome10.Visible = false;
                 lblDescrizione10.Visible = false;
                 txtNomeEl5InvNPC.Visible = false;
@@ -407,6 +444,10 @@ namespace Editor
                 fuEl5InvNPC.Enabled = false;
                 fuEl5InvNPC.Visible = false;
                 imgEl5InvNPC.Visible = false;
+                lblSelezionaSkinNPC5.Visible = false;
+                txtNomeEl5InvNPC.Text = "";
+                txtDescEl5InvNPC.Text = "";
+                imgEl5InvNPC.ImageUrl = "";
                 btnCreaNPC.Enabled = true;
                 pnInventarioNPC.Visible = false;
                 pnNPC.Enabled = true;
@@ -1254,10 +1295,16 @@ namespace Editor
             lblAmbPartenza.Visible = false;
             lblSelezionaSkinPlayer.Visible = false;
             imgSkin.Visible = false;
+            txtNomePlayer.Visible = false;
+            ddlAmbInitPlayer.Visible = false;
+            fuPlayer.Visible = false;
+            btnCaricaImgPlayer.Visible = false;
+            btnCreaPlayer.Visible = false;
             btnEsporta.Visible = true;
             lblErrExport.Visible = true;
             txtNomeFile.Visible = true;
-            lblNomePlayer.Visible = true;
+            lblNomeFile.Visible = true;
+            lblErrAmb.Visible = true;
             #endregion
         }
 
