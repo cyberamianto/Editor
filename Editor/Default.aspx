@@ -52,7 +52,11 @@
             </asp:Panel>
             <br />
             <asp:Panel ID="pnAmbienteSpecifico" runat="server" style="left:300px; width:700px; top:157px; position:absolute; height: 331px; bottom: 399px;">
-&nbsp;<asp:TextBox ID="txtNomeAmb" runat="server">Nome</asp:TextBox>
+&nbsp;<asp:Label ID="Label1" runat="server" Text="Nominare ambiente scelto con la ddl"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label3" runat="server" Text="L. difficoltà"></asp:Label>
+                <br />
+                <asp:TextBox ID="txtNomeAmb" runat="server"></asp:TextBox>
                 <asp:DropDownList ID="ddlScegliAmbiente" runat="server">
                 </asp:DropDownList>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -74,10 +78,13 @@
                 <asp:Image ID="imgAmb" runat="server" BorderStyle="None" style="max-height:150px;max-width:250px;height:auto;width:auto;"/>
                 <br />
                 <br />
+                <asp:Label ID="Label2" runat="server" Text="Scegliere uno sfondo"></asp:Label>
+                <br />
                 <asp:FileUpload ID="fuAmb" accept="image/*" runat="server" />
                 &nbsp;
                 <br />
                 <asp:Button ID="btnCaricaImgAmb" runat="server" OnClick="btnCaricaImgAmb_Click" Text="Carica sfondo" />
+                <br />
                 <br />
                 <asp:Button ID="btnAggiuntaSpecifiche" runat="server" OnClick="btnAggiuntaSpecifiche_Click" Text="Aggiungi specifiche" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -86,6 +93,8 @@
             <br />
             <br />
             <asp:Panel ID="pnInventarioAmbiente" runat="server">
+                <asp:Label ID="Label4" runat="server" Text="Seleziona l'ambiente e il numero di elementi da aggiungere"></asp:Label>
+                <br />
                 <asp:DropDownList ID="ddlInvAmb" runat="server">
                 </asp:DropDownList>
                 <asp:DropDownList ID="ddlNumElementi" runat="server">
@@ -139,7 +148,13 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtDescEl5Inv" runat="server" Height="167px" TextMode="MultiLine" Visible="False" Width="188px"></asp:TextBox>
                 <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <br />
+                <asp:Label ID="lblSelezionaSkin1" runat="server" Text="Seleziona skin" style="left:10px; width:242px; position:absolute;" Visible="False"></asp:Label>
+                &nbsp;&nbsp;&nbsp;<asp:Label ID="lblSelezionaSkin2" runat="server" Text="Seleziona skin" style="left:320px; width:242px; position:absolute;" Visible="False"></asp:Label>
+                <asp:Label ID="lblSelezionaSkin3" runat="server" Text="Seleziona skin" style="left:640px; width:242px; position:absolute;" Visible="False"></asp:Label>
+                <asp:Label ID="lblSelezionaSkin4" runat="server" Text="Seleziona skin" style="left:960px; width:242px; position:absolute;" Visible="False"></asp:Label>
+                <asp:Label ID="lblSelezionaSkin5" runat="server" Text="Seleziona skin" style="left:1280px; width:242px; position:absolute;" Visible="False"></asp:Label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <br />
                 <asp:FileUpload ID="fuEl1Inv" runat="server" accept="image/*" style="left:10px; width:242px; position:absolute;" Visible="False" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -213,12 +228,23 @@
             </asp:Panel>
             <br />
             <asp:Panel ID="pnNPC" runat="server">
+                <asp:Label ID="Label10" runat="server" Text="Nome NPC"></asp:Label>
+                <br />
                 <asp:TextBox ID="txtNomeNPC" runat="server"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="Label11" runat="server" Text="Descrizione NPC"></asp:Label>
                 <br />
                 <asp:TextBox ID="txtDescNPC" runat="server" Height="129px" TextMode="MultiLine" Width="209px"></asp:TextBox>
                 <br />
+                <br />
+                <asp:Label ID="Label12" runat="server" Text="Ambiente appartenenza"></asp:Label>
+                <br />
                 <asp:DropDownList ID="ddlAmbNPC" runat="server">
                 </asp:DropDownList>
+                <br />
+                <br />
+                <asp:Label ID="Label13" runat="server" Text="Salute NPC"></asp:Label>
                 <br />
                 <asp:DropDownList ID="ddlSaluteNPC" runat="server">
                     <asp:ListItem>Molto buona</asp:ListItem>
@@ -227,6 +253,9 @@
                     <asp:ListItem>Non buona</asp:ListItem>
                     <asp:ListItem>Critica</asp:ListItem>
                 </asp:DropDownList>
+                <br />
+                <br />
+                <asp:Label ID="Label14" runat="server" Text="Esperienza NPC"></asp:Label>
                 <br />
                 <asp:DropDownList ID="ddlLivelloEsp" runat="server">
                     <asp:ListItem>1</asp:ListItem>
@@ -241,6 +270,8 @@
                     <asp:ListItem>10</asp:ListItem>
                 </asp:DropDownList>
                 <br />
+                <br />
+                <asp:Label ID="Label15" runat="server" Text="Frase che dice l'NPC"></asp:Label>
                 <br />
                 <asp:TextBox ID="txtFraseNPC" runat="server"></asp:TextBox>
                 <br />
@@ -302,17 +333,24 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <asp:TextBox ID="txtDescEl5InvNPC" runat="server" Height="167px" TextMode="MultiLine" Visible="False" Width="202px"></asp:TextBox>
                 <br />
-                <asp:FileUpload ID="fuEl1InvNPC" runat="server" style="left:10px; width:242px; position:absolute;" />
-                <asp:FileUpload ID="fuEl2InvNPC" runat="server" style="left:320px; width:242px; position:absolute;" />
-                <asp:FileUpload ID="fuEl3InvNPC" runat="server" style="left:640px; width:242px; position:absolute;" />
-                <asp:FileUpload ID="fuEl4InvNPC" runat="server" style="left:960px; width:242px; position:absolute;" />
-                <asp:FileUpload ID="fuEl5InvNPC" runat="server" style="left:1280px; width:242px; position:absolute;" />
                 <br />
-                <asp:Button ID="btnCaricaImgEl1InvNPC" runat="server" Text="Carica immagine" style="left:10px; width:242px; position:absolute;" OnClick="btnCaricaImgEl1InvNPC_Click"/>
-                <asp:Button ID="btnCaricaImgEl2InvNPC" runat="server" Text="Carica immagine" style="left:320px; width:242px; position:absolute;" OnClick="btnCaricaImgEl2InvNPC_Click"/>
-                <asp:Button ID="btnCaricaImgEl3InvNPC" runat="server" Text="Carica immagine" style="left:640px; width:242px; position:absolute;" OnClick="btnCaricaImgEl3InvNPC_Click"/>
-                <asp:Button ID="btnCaricaImgEl4InvNPC" runat="server" Text="Carica immagine" style="left:960px; width:242px; position:absolute;" OnClick="btnCaricaImgEl4InvNPC_Click"/>
-                <asp:Button ID="btnCaricaImgEl5InvNPC" runat="server" Text="Carica immagine" style="left:1280px; width:242px; position:absolute;" OnClick="btnCaricaImgEl5InvNPC_Click"/>
+                <asp:Label ID="lblSelezionaSkinNPC1" runat="server" Text="Seleziona skin" style="left:10px; width:242px; position:absolute;" Visible="False"></asp:Label>
+                <asp:Label ID="lblSelezionaSkinNPC2" runat="server" Text="Seleziona skin" style="left:320px; width:242px; position:absolute;" Visible="False"></asp:Label>
+                <asp:Label ID="lblSelezionaSkinNPC3" runat="server" Text="Seleziona skin" style="left:640px; width:242px; position:absolute;" Visible="False"></asp:Label>
+                <asp:Label ID="lblSelezionaSkinNPC4" runat="server" Text="Seleziona skin" style="left:960px; width:242px; position:absolute;" Visible="False"></asp:Label>
+                <asp:Label ID="lblSelezionaSkinNPC5" runat="server" Text="Seleziona skin" style="left:1280px; width:242px; position:absolute;" Visible="False"></asp:Label>
+                <br />
+                <asp:FileUpload ID="fuEl1InvNPC" accept="image/*" runat="server" style="left:10px; width:242px; position:absolute;" Visible="False" />
+                <asp:FileUpload ID="fuEl2InvNPC" accept="image/*" runat="server" style="left:320px; width:242px; position:absolute;" Visible="False" />
+                <asp:FileUpload ID="fuEl3InvNPC" accept="image/*" runat="server" style="left:640px; width:242px; position:absolute;" Visible="False" />
+                <asp:FileUpload ID="fuEl4InvNPC" accept="image/*" runat="server" style="left:960px; width:242px; position:absolute;" Visible="False" />
+                <asp:FileUpload ID="fuEl5InvNPC" accept="image/*" runat="server" style="left:1280px; width:242px; position:absolute;" Visible="False" />
+                <br />
+                <asp:Button ID="btnCaricaImgEl1InvNPC" runat="server" Text="Carica immagine" style="left:10px; width:242px; position:absolute;" OnClick="btnCaricaImgEl1InvNPC_Click" Visible="False"/>
+                <asp:Button ID="btnCaricaImgEl2InvNPC" runat="server" Text="Carica immagine" style="left:320px; width:242px; position:absolute;" OnClick="btnCaricaImgEl2InvNPC_Click" Visible="False"/>
+                <asp:Button ID="btnCaricaImgEl3InvNPC" runat="server" Text="Carica immagine" style="left:640px; width:242px; position:absolute;" OnClick="btnCaricaImgEl3InvNPC_Click" Visible="False"/>
+                <asp:Button ID="btnCaricaImgEl4InvNPC" runat="server" Text="Carica immagine" style="left:960px; width:242px; position:absolute;" OnClick="btnCaricaImgEl4InvNPC_Click" Visible="False"/>
+                <asp:Button ID="btnCaricaImgEl5InvNPC" runat="server" Text="Carica immagine" style="left:1280px; width:242px; position:absolute;" OnClick="btnCaricaImgEl5InvNPC_Click" Visible="False"/>
                 <br />
                 <asp:DropDownList ID="ddlRacIndEl1InvNPC" runat="server" style="left:10px; width:242px; position:absolute;" Visible="False">
                     <asp:ListItem>Indossabile</asp:ListItem>
@@ -361,24 +399,33 @@
             </asp:Panel>
             <br />
             <asp:Panel ID="pnPlayer" runat="server" style="margin-bottom: 0px">
+                <asp:Label ID="lblNomePlayer" runat="server" Text="Nome player"></asp:Label>
+                <br />
                 <asp:TextBox ID="txtNomePlayer" runat="server"></asp:TextBox>
                 <br />
+                <br />
+                <asp:Label ID="lblAmbPartenza" runat="server" Text="Ambiente di partenza"></asp:Label>
                 <br />
                 <asp:DropDownList ID="ddlAmbInitPlayer" runat="server">
                 </asp:DropDownList>
                 <br />
                 <br />
-                <asp:FileUpload ID="fuPlayer" runat="server" style="left:10px; width:242px; position:absolute;" />
+                <asp:Label ID="lblSelezionaSkinPlayer" runat="server" Text="Seleziona skin"></asp:Label>
+                <br />
+                <asp:FileUpload ID="fuPlayer" accept="image/*" runat="server" style="left:10px; width:242px; position:absolute;" />
                 <br />
                 <asp:Button ID="btnCaricaImgPlayer" runat="server" OnClick="btnCaricaImgPlayer_Click" style="left:10px; width:242px; position:absolute;" Text="Carica skin" />
                 <br />
                 <br />
                 <asp:Button ID="btnCreaPlayer" runat="server" OnClick="btnCreaPlayer_Click" style="left:10px; width:242px; position:absolute;" Text="Crea Player" />
                 <br />
+                <asp:Label ID="lblNomeFile" runat="server" Text="Nomina il file da esportare" style="left:385px; position:absolute;" Visible="False"></asp:Label>
                 <br />
                 <asp:Image ID="imgSkin" runat="server" style="left:10px; position:absolute;" />
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="btnEsporta" runat="server" Text="Esporta configrazione" style="left:640px; width:242px; position:absolute;" OnClick="btnEsporta_Click" />
+                <asp:Button ID="btnEsporta" runat="server" Text="Esporta configrazione" style="left:640px; width:242px; position:absolute; " OnClick="btnEsporta_Click" Visible="False" />
+                <asp:Label ID="lblErrExport" runat="server" style="left:900px; position:absolute; top: 2899px;" Visible="False"></asp:Label>
+                <asp:TextBox ID="txtNomeFile" runat="server" style="left:385px; width:242px; position:absolute;" Visible="False"></asp:TextBox>
                 <br />
             </asp:Panel>
             <br />

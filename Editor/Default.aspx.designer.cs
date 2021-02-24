@@ -240,6 +240,24 @@ namespace Editor
         protected global::System.Web.UI.WebControls.Panel pnAmbienteSpecifico;
 
         /// <summary>
+        /// Controllo Label1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+
+        /// <summary>
+        /// Controllo Label3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
+
+        /// <summary>
         /// Controllo txtNomeAmb.
         /// </summary>
         /// <remarks>
@@ -285,6 +303,15 @@ namespace Editor
         protected global::System.Web.UI.WebControls.Image imgAmb;
 
         /// <summary>
+        /// Controllo Label2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+
+        /// <summary>
         /// Controllo fuAmb.
         /// </summary>
         /// <remarks>
@@ -328,6 +355,15 @@ namespace Editor
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel pnInventarioAmbiente;
+
+        /// <summary>
+        /// Controllo Label4.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label4;
 
         /// <summary>
         /// Controllo ddlInvAmb.
@@ -535,6 +571,51 @@ namespace Editor
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDescEl5Inv;
+
+        /// <summary>
+        /// Controllo lblSelezionaSkin1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSelezionaSkin1;
+
+        /// <summary>
+        /// Controllo lblSelezionaSkin2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSelezionaSkin2;
+
+        /// <summary>
+        /// Controllo lblSelezionaSkin3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSelezionaSkin3;
+
+        /// <summary>
+        /// Controllo lblSelezionaSkin4.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSelezionaSkin4;
+
+        /// <summary>
+        /// Controllo lblSelezionaSkin5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSelezionaSkin5;
 
         /// <summary>
         /// Controllo fuEl1Inv.
@@ -771,6 +852,15 @@ namespace Editor
         protected global::System.Web.UI.WebControls.Panel pnNPC;
 
         /// <summary>
+        /// Controllo Label10.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label10;
+
+        /// <summary>
         /// Controllo txtNomeNPC.
         /// </summary>
         /// <remarks>
@@ -778,6 +868,15 @@ namespace Editor
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNomeNPC;
+
+        /// <summary>
+        /// Controllo Label11.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label11;
 
         /// <summary>
         /// Controllo txtDescNPC.
@@ -789,6 +888,15 @@ namespace Editor
         protected global::System.Web.UI.WebControls.TextBox txtDescNPC;
 
         /// <summary>
+        /// Controllo Label12.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label12;
+
+        /// <summary>
         /// Controllo ddlAmbNPC.
         /// </summary>
         /// <remarks>
@@ -796,6 +904,15 @@ namespace Editor
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlAmbNPC;
+
+        /// <summary>
+        /// Controllo Label13.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label13;
 
         /// <summary>
         /// Controllo ddlSaluteNPC.
@@ -807,6 +924,15 @@ namespace Editor
         protected global::System.Web.UI.WebControls.DropDownList ddlSaluteNPC;
 
         /// <summary>
+        /// Controllo Label14.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label14;
+
+        /// <summary>
         /// Controllo ddlLivelloEsp.
         /// </summary>
         /// <remarks>
@@ -814,6 +940,15 @@ namespace Editor
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlLivelloEsp;
+
+        /// <summary>
+        /// Controllo Label15.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label15;
 
         /// <summary>
         /// Controllo txtFraseNPC.
@@ -1050,6 +1185,51 @@ namespace Editor
         protected global::System.Web.UI.WebControls.TextBox txtDescEl5InvNPC;
 
         /// <summary>
+        /// Controllo lblSelezionaSkinNPC1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSelezionaSkinNPC1;
+
+        /// <summary>
+        /// Controllo lblSelezionaSkinNPC2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSelezionaSkinNPC2;
+
+        /// <summary>
+        /// Controllo lblSelezionaSkinNPC3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSelezionaSkinNPC3;
+
+        /// <summary>
+        /// Controllo lblSelezionaSkinNPC4.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSelezionaSkinNPC4;
+
+        /// <summary>
+        /// Controllo lblSelezionaSkinNPC5.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSelezionaSkinNPC5;
+
+        /// <summary>
         /// Controllo fuEl1InvNPC.
         /// </summary>
         /// <remarks>
@@ -1284,6 +1464,15 @@ namespace Editor
         protected global::System.Web.UI.WebControls.Panel pnPlayer;
 
         /// <summary>
+        /// Controllo lblNomePlayer.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNomePlayer;
+
+        /// <summary>
         /// Controllo txtNomePlayer.
         /// </summary>
         /// <remarks>
@@ -1293,6 +1482,15 @@ namespace Editor
         protected global::System.Web.UI.WebControls.TextBox txtNomePlayer;
 
         /// <summary>
+        /// Controllo lblAmbPartenza.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAmbPartenza;
+
+        /// <summary>
         /// Controllo ddlAmbInitPlayer.
         /// </summary>
         /// <remarks>
@@ -1300,6 +1498,15 @@ namespace Editor
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlAmbInitPlayer;
+
+        /// <summary>
+        /// Controllo lblSelezionaSkinPlayer.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblSelezionaSkinPlayer;
 
         /// <summary>
         /// Controllo fuPlayer.
@@ -1329,6 +1536,15 @@ namespace Editor
         protected global::System.Web.UI.WebControls.Button btnCreaPlayer;
 
         /// <summary>
+        /// Controllo lblNomeFile.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblNomeFile;
+
+        /// <summary>
         /// Controllo imgSkin.
         /// </summary>
         /// <remarks>
@@ -1345,5 +1561,23 @@ namespace Editor
         /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnEsporta;
+
+        /// <summary>
+        /// Controllo lblErrExport.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblErrExport;
+
+        /// <summary>
+        /// Controllo txtNomeFile.
+        /// </summary>
+        /// <remarks>
+        /// Campo generato automaticamente.
+        /// Per la modifica, spostare la dichiarazione di campo dal file di progettazione al file code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtNomeFile;
     }
 }
